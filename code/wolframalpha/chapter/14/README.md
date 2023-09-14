@@ -1,0 +1,11 @@
+# 14 積分
+- [integral\_1^4 \(\-x^2\+4x\+1\) dx](https://www.wolframalpha.com/input?i=integral_1%5E4%2B%28-x%5E2%2B4x%2B1%29%2Bdx)<br>![integral\_1^4 \(\-x^2\+4x\+1\) dx](01.png)
+- [integral\_a^x \-x^2\+4x\+1 dx](https://www.wolframalpha.com/input?i=integral_a%5Ex%2B-x%5E2%2B4x%2B1%2Bdx)<br>![integral\_a^x \-x^2\+4x\+1 dx](02.png)
+- [integral \-x^2\+4x\+1 dx](https://www.wolframalpha.com/input?i=integral%2B-x%5E2%2B4x%2B1%2Bdx)<br>![integral \-x^2\+4x\+1 dx](03.png)
+- [y'\(x\)=\-x^2\+4x\+1](https://www.wolframalpha.com/input?i=y%27%28x%29%3D-x%5E2%2B4x%2B1)<br>![y'\(x\)=\-x^2\+4x\+1](04.png)
+- [y'\(x\)=\-x^2\+4x\+1,y\(0\)=\-1](https://www.wolframalpha.com/input?i=y%27%28x%29%3D-x%5E2%2B4x%2B1%2Cy%280%29%3D-1)<br>![y'\(x\)=\-x^2\+4x\+1,y\(0\)=\-1](05.png)
+- [y'\(x\)=\-x y\(x\)](https://www.wolframalpha.com/input?i=y%27%28x%29%3D-x%2By%28x%29)<br>![y'\(x\)=\-x y\(x\)](06.png)
+- [d/dx\(integral\_a^x f\(t\)dt\)](https://www.wolframalpha.com/input?i=d%2Fdx%28integral_a%5Ex%2Bf%28t%29dt%29)<br>![d/dx\(integral\_a^x f\(t\)dt\)](07.png)
+- [integral \(p x\+q\)^100 dx](https://www.wolframalpha.com/input?i=integral%2B%28p%2Bx%2Bq%29%5E100%2Bdx)<br>![integral \(p x\+q\)^100 dx](08.png)
+- [int 1/x^a x=0\.\.1](https://www.wolframalpha.com/input?i=int%2B1%2Fx%5Ea%2Bx%3D0..1)<br>![int 1/x^a x=0\.\.1](09.png)
+- [int 1/x^a x=1\.\.infinity](https://www.wolframalpha.com/input?i=int%2B1%2Fx%5Ea%2Bx%3D1..infinity)<br>![int 1/x^a x=1\.\.infinity](10.png)

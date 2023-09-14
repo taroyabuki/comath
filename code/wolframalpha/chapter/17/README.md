@@ -1,0 +1,10 @@
+# 17 行列
+- [\{\{1,2,0\},\{0,3,4\}\}](https://www.wolframalpha.com/input?i=%7B%7B1%2C2%2C0%7D%2C%7B0%2C3%2C4%7D%7D)<br>![\{\{1,2,0\},\{0,3,4\}\}](01.png)
+- [symmetric matrix \{\{1,2\},\{2,3\}\}](https://www.wolframalpha.com/input?i=symmetric%2Bmatrix%2B%7B%7B1%2C2%7D%2C%7B2%2C3%7D%7D)<br>![symmetric matrix \{\{1,2\},\{2,3\}\}](02.png)
+- [10 \{\{2,3\},\{5,7\}\}](https://www.wolframalpha.com/input?i=10%2B%7B%7B2%2C3%7D%2C%7B5%2C7%7D%7D)<br>![10 \{\{2,3\},\{5,7\}\}](03.png)
+- [\{\{10,20\},\{30,40\}\}\+\{\{2,3\},\{4,5\}\}](https://www.wolframalpha.com/input?i=%7B%7B10%2C20%7D%2C%7B30%2C40%7D%7D%2B%7B%7B2%2C3%7D%2C%7B4%2C5%7D%7D)<br>![\{\{10,20\},\{30,40\}\}\+\{\{2,3\},\{4,5\}\}](04.png)
+- [\{\{2,3\},\{5,7\}\}\.\{\{1,2\},\{3,4\}\}](https://www.wolframalpha.com/input?i=%7B%7B2%2C3%7D%2C%7B5%2C7%7D%7D.%7B%7B1%2C2%7D%2C%7B3%2C4%7D%7D)<br>![\{\{2,3\},\{5,7\}\}\.\{\{1,2\},\{3,4\}\}](05.png)
+- [\{\{2,3\},\{5,7\}\}\.\{1,3\}](https://www.wolframalpha.com/input?i=%7B%7B2%2C3%7D%2C%7B5%2C7%7D%7D.%7B1%2C3%7D)<br>![\{\{2,3\},\{5,7\}\}\.\{1,3\}](06.png)
+- [\{1,3\}\.\{\{2,3\},\{5,7\}\}](https://www.wolframalpha.com/input?i=%7B1%2C3%7D.%7B%7B2%2C3%7D%2C%7B5%2C7%7D%7D)<br>![\{1,3\}\.\{\{2,3\},\{5,7\}\}](07.png)
+- [\(inverse \{\{3,2\},\{1,2\}\}\)\.\{8, 4\}](https://www.wolframalpha.com/input?i=%28inverse%2B%7B%7B3%2C2%7D%2C%7B1%2C2%7D%7D%29.%7B8%2C%2B4%7D)<br>![\(inverse \{\{3,2\},\{1,2\}\}\)\.\{8, 4\}](08.png)
+- [row reduce \{\{4,2,8\},\{2,1,4\}\}](https://www.wolframalpha.com/input?i=row%2Breduce%2B%7B%7B4%2C2%2C8%7D%2C%7B2%2C1%2C4%7D%7D)<br>![row reduce \{\{4,2,8\},\{2,1,4\}\}](09.png)
