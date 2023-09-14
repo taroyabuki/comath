@@ -12,7 +12,7 @@
 - [\-2 < \-1](https://www.wolframalpha.com/input?i=-2%20%3C%20-1)
 - [2 \+ 2 == 5](https://www.wolframalpha.com/input?i=2%20%2B%202%20%3D%3D%205)
 - [x<1](https://www.wolframalpha.com/input?i=x%3C1)
-- [Not\[0<1\]](https://www.wolframalpha.com/input?i=Not%5B0%3C1%5D)
+- [not \(0 < 1\)](https://www.wolframalpha.com/input?i=not%20%280%20%3C%201%29)
 - [\(0 < 1\) or \(2 > 3\)](https://www.wolframalpha.com/input?i=%280%20%3C%201%29%20or%20%282%20%3E%203%29)
 - [\(0 < 1\) and \(2 > 3\)](https://www.wolframalpha.com/input?i=%280%20%3C%201%29%20and%20%282%20%3E%203%29)
 - [Not\[10<x\]](https://www.wolframalpha.com/input?i=Not%5B10%3Cx%5D)

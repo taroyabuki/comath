@@ -7,7 +7,7 @@
 - [\-2 < \-1](https://www.wolframalpha.com/input?i=-2%20%3C%20-1)<br>![\-2 < \-1](06.png)
 - [2 \+ 2 == 5](https://www.wolframalpha.com/input?i=2%20%2B%202%20%3D%3D%205)<br>![2 \+ 2 == 5](07.png)
 - [x<1](https://www.wolframalpha.com/input?i=x%3C1)<br>![x<1](08.png)
-- [Not\[0<1\]](https://www.wolframalpha.com/input?i=Not%5B0%3C1%5D)<br>![Not\[0<1\]](09.png)
+- [not \(0 < 1\)](https://www.wolframalpha.com/input?i=not%20%280%20%3C%201%29)<br>![not \(0 < 1\)](09.png)
 - [\(0 < 1\) or \(2 > 3\)](https://www.wolframalpha.com/input?i=%280%20%3C%201%29%20or%20%282%20%3E%203%29)<br>![\(0 < 1\) or \(2 > 3\)](10.png)
 - [\(0 < 1\) and \(2 > 3\)](https://www.wolframalpha.com/input?i=%280%20%3C%201%29%20and%20%282%20%3E%203%29)<br>![\(0 < 1\) and \(2 > 3\)](11.png)
 - [Not\[10<x\]](https://www.wolframalpha.com/input?i=Not%5B10%3Cx%5D)<br>![Not\[10<x\]](12.png)
