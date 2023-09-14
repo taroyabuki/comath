@@ -98,7 +98,7 @@
 
 # 14 積分
 - [integral\_1^4 \(\-x^2\+4x\+1\) dx](https://www.wolframalpha.com/input?i=integral_1%5E4%20%28-x%5E2%2B4x%2B1%29%20dx)
-- [integral\_a^x \-x^2\+4x\+1 dx](https://www.wolframalpha.com/input?i=integral_a%5Ex%20-x%5E2%2B4x%2B1%20dx)
+- [integral\_a^x \(\-t^2\+4t\+1\) dt](https://www.wolframalpha.com/input?i=integral_a%5Ex%20%28-t%5E2%2B4t%2B1%29%20dt)
 - [integral \-x^2\+4x\+1 dx](https://www.wolframalpha.com/input?i=integral%20-x%5E2%2B4x%2B1%20dx)
 - [y'\(x\)=\-x^2\+4x\+1](https://www.wolframalpha.com/input?i=y%27%28x%29%3D-x%5E2%2B4x%2B1)
 - [y'\(x\)=\-x^2\+4x\+1,y\(0\)=\-1](https://www.wolframalpha.com/input?i=y%27%28x%29%3D-x%5E2%2B4x%2B1%2Cy%280%29%3D-1)

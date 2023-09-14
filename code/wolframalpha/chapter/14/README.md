@@ -1,6 +1,6 @@
 # 14 積分
 - [integral\_1^4 \(\-x^2\+4x\+1\) dx](https://www.wolframalpha.com/input?i=integral_1%5E4%20%28-x%5E2%2B4x%2B1%29%20dx)<br>![integral\_1^4 \(\-x^2\+4x\+1\) dx](01.png)
-- [integral\_a^x \-x^2\+4x\+1 dx](https://www.wolframalpha.com/input?i=integral_a%5Ex%20-x%5E2%2B4x%2B1%20dx)<br>![integral\_a^x \-x^2\+4x\+1 dx](02.png)
+- [integral\_a^x \(\-t^2\+4t\+1\) dt](https://www.wolframalpha.com/input?i=integral_a%5Ex%20%28-t%5E2%2B4t%2B1%29%20dt)<br>![integral\_a^x \(\-t^2\+4t\+1\) dt](02.png)
 - [integral \-x^2\+4x\+1 dx](https://www.wolframalpha.com/input?i=integral%20-x%5E2%2B4x%2B1%20dx)<br>![integral \-x^2\+4x\+1 dx](03.png)
 - [y'\(x\)=\-x^2\+4x\+1](https://www.wolframalpha.com/input?i=y%27%28x%29%3D-x%5E2%2B4x%2B1)<br>![y'\(x\)=\-x^2\+4x\+1](04.png)
 - [y'\(x\)=\-x^2\+4x\+1,y\(0\)=\-1](https://www.wolframalpha.com/input?i=y%27%28x%29%3D-x%5E2%2B4x%2B1%2Cy%280%29%3D-1)<br>![y'\(x\)=\-x^2\+4x\+1,y\(0\)=\-1](05.png)
