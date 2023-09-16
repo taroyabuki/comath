@@ -1,6 +1,5 @@
 # 1 実行環境
 
-
 ```{r}
 install.packages(c("ellipse", "exactci", "matrixcalc", "mnormt", "pracma"))
 ```
@@ -12,7 +11,6 @@ summary(model)
 ```
 
 # 2 数と変数
-
 
 ```{r}
 2 * (-3)
@@ -126,7 +124,6 @@ options(digits = 22) # 表示桁数の設定（デフォルトは7）
 
 # 3 データ構造
 
-
 ```{r}
 v <- c(2, 3, 5); length(v)
 ```
@@ -223,7 +220,6 @@ df$english
 
 # 4 可視化と方程式
 
-
 ```{r}
 curve(x^2 + 2 * x - 4, -5, 3)
 ```
@@ -267,9 +263,7 @@ uniroot(f, c(-2, 0))
 
 # 5 論理式
 
-
 # 6 1次元のデータ
-
 
 ```{r}
 a <- c(36, 43, 53, 55, 56, 56, 57, 60, 61, 73)
@@ -335,7 +329,6 @@ sd(a) * z + mean(a)
 
 # 7 2次元のデータ
 
-
 ```{r}
 x <- c(35, 45, 55, 65, 75); y <- c(114, 124, 143, 158, 166)
 plot(x, y)
@@ -384,7 +377,6 @@ abline(model)
 ```
 
 # 8 確率変数と確率分布
-
 
 ```{r}
 x <- 1:6
@@ -518,7 +510,6 @@ integrate(Vectorize(h), -1, 1)
 
 # 9 多次元の確率分布
 
-
 ```{r}
 n <- 20; p <- 3 / 10; mu <- n * p; sigma <- (n * p * (1 - p))**0.5
 plot(0:n, dbinom(0:n, n, p))
@@ -544,7 +535,6 @@ contour(Y1, Y2, matrix(data$z, nrow = length(Y1)))
 ```
 
 # 10 推測統計
-
 
 ```{r}
 mu <- 2; sigma <- 3;
@@ -650,7 +640,6 @@ c(qf(c(alpha / 2, 1 - alpha / 2), m - 1, n - 1))
 ```
 
 # 11 線形回帰分析
-
 
 ```{r}
 data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
@@ -789,12 +778,9 @@ ggplot(data, aes(x1, y)) + geom_point() +
 
 # 12 関数の極限と連続性
 
-
 # 13 微分
 
-
 # 14 積分
-
 
 ```{r}
 f <- function(x) { -x^2 + 4 * x + 1 }
@@ -803,9 +789,7 @@ integrate(f, 1, 4)
 
 # 15 多変数関数の微分積分
 
-
 # 16 ベクトル
-
 
 ```{r}
 100 * c(1, 2) + 10 * c(3, 1)
@@ -832,7 +816,6 @@ acos(sum(a * b) / (norm(a, type = "2") * norm(b, type = "2")))
 ```
 
 # 17 行列
-
 
 ```{r}
 (A <- rbind(c(1, 2, 0), c(0, 3, 4)))
@@ -909,7 +892,6 @@ pracma::rref(rbind(c(4, 2, 8), c(2, 1, 4)))
 
 # 18 ベクトル空間
 
-
 ```{r}
 A = rbind(c(1, 0), c(1, 1), c(0, 1));
 tmp <- qr(A); Q <- qr.Q(tmp); R <- qr.R(tmp)
@@ -926,7 +908,6 @@ MASS::Null(A) # MASS::Null(t(A))ではない．
 ```
 
 # 19 固有値と固有ベクトル
-
 
 ```{r}
 A <- rbind(c(2, 1), c(4, -1))
@@ -978,7 +959,6 @@ prcomp(data)$rotation[, 1]
 ```
 
 # 20 特異値分解と疑似逆行列
-
 
 ```{r}
 A <- rbind(c(1, 0), c(1, 1), c(0, 1))
