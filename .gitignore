@@ -1,4 +1,9 @@
 bak
+.ipynb_checkpoints
 *.txt
+*.py
+*.sh
 union.*
 wolframalpha.*
+mathematica
+python.md

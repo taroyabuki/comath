@@ -78,6 +78,8 @@
 - [t\-test mu0=25,xbar=25\.21429,s=0\.7151423,n=7](https://www.wolframalpha.com/input?i=t-test%20mu0%3D25%2Cxbar%3D25.21429%2Cs%3D0.7151423%2Cn%3D7)
 
 # 11 線形回帰分析
+- [linear fit \{1,2,3\},\{1,3,6\},\{2,5,3\},\{3,7,6\}](https://www.wolframalpha.com/input?i=linear%20fit%20%7B1%2C2%2C3%7D%2C%7B1%2C3%2C6%7D%2C%7B2%2C5%2C3%7D%2C%7B3%2C7%2C6%7D)
+- [PseudoInverse\[\(\{\{1,1,2\},\{1,1,3\},\{1,2,5\},\{1,3,7\}\}\)\]\.\{3,6,3,6\}](https://www.wolframalpha.com/input?i=PseudoInverse%5B%28%7B%7B1%2C1%2C2%7D%2C%7B1%2C1%2C3%7D%2C%7B1%2C2%2C5%7D%2C%7B1%2C3%2C7%7D%7D%29%5D.%7B3%2C6%2C3%2C6%7D)
 
 # 12 関数の極限と連続性
 - [lim f\(x\) as x\->1 where f\(x\)=2x\-3](https://www.wolframalpha.com/input?i=lim%20f%28x%29%20as%20x-%3E1%20where%20f%28x%29%3D2x-3)
