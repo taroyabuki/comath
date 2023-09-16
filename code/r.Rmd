@@ -1,0 +1,1009 @@
+# 1 実行環境
+
+
+```{r}
+install.packages(c("ellipse", "exactci", "matrixcalc", "mnormt", "pracma"))
+```
+
+```{r}
+data <- data.frame(x1 = c(1, 3, 6, 10), y = c(7, 1, 6, 14))
+model <- lm(y ~ x1, data)
+summary(model)
+```
+
+# 2 数と変数
+
+
+```{r}
+2 * (-3)
+```
+
+```{r}
+(1 + 2) * 3
+```
+
+```{r}
+2^10
+```
+
+```{r}
+2**10
+```
+
+```{r}
+-2 < -1
+```
+
+```{r}
+2 + 2 == 5
+```
+
+```{r}
+!(0 < 1)
+```
+
+```{r}
+(0 < 1) | (2 > 3)
+```
+
+```{r}
+(0 < 1) & (2 > 3)
+```
+
+```{r}
+x = 5; x == 5
+```
+
+```{r}
+a = 1 + 2
+b = 9
+a * (b + 1)
+```
+
+```{r}
+a = 1 + 2; b = 9; a * (b + 1)
+```
+
+```{r}
+(a <- 1 + 2)
+```
+
+```{r}
+x1 = 2; x2 = 3; x1 + x2
+```
+
+```{r}
+x = 1; y = x + 1; x = 2; y
+```
+
+```{r}
+f <- function(x) { 2 * x + 3 }
+f(5)
+```
+
+```{r}
+f <- function(x) { 1 / x }
+```
+
+```{r}
+(function(x) 2 * x + 3)(5)
+```
+
+```{r}
+f <- function(x, y) { x + y }
+f(2, 3)
+```
+
+```{r}
+g <- function(x) { x[1] + x[2] }
+x <- c(2, 3); g(x)
+```
+
+```{r}
+do.call(f, as.list(x))
+```
+
+```{r}
+g(c(2, 3))
+```
+
+```{r}
+0.1 + 0.1 + 0.1 == 0.3
+```
+
+```{r}
+all.equal(0.1 + 0.1 + 0.1, 0.3) # TRUE
+```
+
+```{r}
+all.equal(1e-7, 0, tolerance = 1e-6) # TRUE
+```
+
+```{r}
+options(digits = 22) # 表示桁数の設定（デフォルトは7）
+9007199254740992 + 1 # 9007199254740992
+```
+
+# 3 データ構造
+
+
+```{r}
+v <- c(2, 3, 5); length(v)
+```
+
+```{r}
+v[3] <- 4; v
+```
+
+```{r}
+1:5
+```
+
+```{r}
+seq(0, 1, 0.1)
+```
+
+```{r}
+seq(0, 100, length.out = 5)
+```
+
+```{r}
+v <- c(2, 3)
+10 * v
+```
+
+```{r}
+u <- rep(0, 2)
+for (i in 1:2) { u[i] <- 10 * v[i] }
+u
+```
+
+```{r}
+u <- c(10, 20); v <- c(2, 3)
+u + v
+```
+
+```{r}
+v + 1
+```
+
+```{r}
+# vの各成分に，「1を足すという関数」を適用する．
+sapply(v, function(x) { x + 1 })
+```
+
+```{r}
+u <- c(10, 20); v <- c(2, 3)
+sum(u * v)
+```
+
+```{r}
+x <- list("apple" = "りんご", "orange" = "みかん")
+x[["orange"]]
+```
+
+```{r}
+x[["grape"]] <- "ぶどう"
+x[["grape"]]
+```
+
+```{r}
+x[["apple"]] <- NULL
+!is.null(x[["apple"]])
+```
+
+```{r}
+df <- data.frame(name = c("A", "B", "C"),
+                 english = c(60, 90, 70),
+                 math = c(70, 80, 90),
+                 gender = c("f", "m", "m"))
+```
+
+```{r}
+df <- rbind(data.frame(name = "A", english = 60, math = 70, gender = "f"),
+            data.frame(name = "B", english = 90, math = 80, gender = "f"),
+            data.frame(name = "C", english = 70, math = 90, gender = "f"))
+```
+
+```{r}
+df[, c("english", "math")]
+```
+
+```{r}
+df$"english"
+```
+
+```{r}
+df$english
+```
+
+```{r}
+(m <- as.matrix(df[, c(2, 3)]))
+```
+
+# 4 可視化と方程式
+
+
+```{r}
+curve(x^2 + 2 * x - 4, -5, 3)
+```
+
+```{r}
+x <- seq(-5, 3, length.out = 101)
+y <- x^2 + 2 * x - 4
+plot(x, y, "l")
+```
+
+```{r}
+par(mfrow = c(1, 3))
+curve(sin(102 * x), 0, 2*pi, main = "n = 101")
+curve(sin(102 * x), 0, 2*pi, main = "n = 102", n = 102)
+curve(sin(102 * x), 0, 2*pi, main = "n = 200", n = 200)
+par(mfrow = c(1, 1))
+```
+
+```{r}
+data <- expand.grid(x = seq(-1, 1, 0.1), y = seq(-1, 1, 0.1))
+data$z <- data$x^2 + data$y^2
+lattice::wireframe(z ~ x + y, data)
+```
+
+```{r}
+x <- seq(-1, 1, length.out = 100); y <- seq(-1, 1, length.out = 100)
+z <- outer(x, y, function(x, y) x^2 + y^2)
+contour(x, y, z)
+```
+
+```{r}
+x <- seq(-1, 1, 0.1); y <- seq(-1, 1, 0.1)
+z <- outer(x, y, function(x, y) x^2 + y^2)
+contour(x, y, z, levels=1)
+```
+
+```{r}
+f <- function(x) { 2^x + sin(x) }
+uniroot(f, c(-2, 0))
+```
+
+# 5 論理式
+
+
+# 6 1次元のデータ
+
+
+```{r}
+a <- c(36, 43, 53, 55, 56, 56, 57, 60, 61, 73)
+b <- c(34, 39, 39, 49, 50, 52, 52, 55, 83, 97)
+```
+
+```{r}
+hist(a)
+```
+
+```{r}
+hist(a, seq(20, 80, 20))$counts
+```
+
+```{r}
+x <- c(7, 3, 1, 3, 4, 7, 7, 7, 10, 3)
+(f <- table(x))
+```
+
+```{r}
+boxplot(a, b, names = c("A", "B"))
+```
+
+```{r}
+mean(a)
+```
+
+```{r}
+sum(b) / length(b)
+```
+
+```{r}
+mean(a - mean(a))
+```
+
+```{r}
+var(a)
+```
+
+```{r}
+sum((b - mean(b))^2) / (length(b) - 1)
+```
+
+```{r}
+(z <- scale(a))
+```
+
+```{r}
+c(mean(z), sd(z))
+```
+
+```{r}
+(a - mean(a)) / sd(a)
+```
+
+```{r}
+sd(a) * z + mean(a)
+```
+
+```{r}
+10 * z + 50
+```
+
+# 7 2次元のデータ
+
+
+```{r}
+x <- c(35, 45, 55, 65, 75); y <- c(114, 124, 143, 158, 166)
+plot(x, y)
+```
+
+```{r}
+cov(x, y)
+```
+
+```{r}
+cov(data.frame(x, y))
+```
+
+```{r}
+sum((x - mean(x)) * (y - mean(y))) / (length(x) - 1)
+```
+
+```{r}
+cor(x, y)
+```
+
+```{r}
+x <- c(35, 45, 55, 65, 75); y <- c(114, 124, 143, 158, 166)
+data <- data.frame(x, y)
+(model <- lm(y ~ x, data))
+```
+
+```{r}
+predict(model, list(x = 40))
+```
+
+```{r}
+plot(data); abline(model)
+```
+
+```{r}
+a <- cov(x, y) / var(x); b <- mean(y) - a * mean(x)
+c(a, b)
+```
+
+```{r}
+print(cor(anscombe$x1, anscombe$y1))
+print(model <- lm(y1 ~ x1, anscombe))
+plot(anscombe$x1, anscombe$y1)
+abline(model)
+```
+
+# 8 確率変数と確率分布
+
+
+```{r}
+x <- 1:6
+data <- sample(x, size = 1000, replace = TRUE)
+hist(data) # 結果は割愛
+```
+
+```{r}
+y <- rep(1 / 6, 6) # 確率関数の値
+hist(data, breaks = seq(0.5, 6.5), freq = FALSE)
+points(x, y)
+```
+
+```{r}
+data <- rbinom(1000, 1, 3 / 10)
+table(data)
+```
+
+```{r}
+dbinom(3, 10, 3 / 10)
+```
+
+```{r}
+n <- 10; p <- 3 / 10
+data <- rbinom(1000, n, p)
+hist(data) # 結果は割愛
+```
+
+```{r}
+x <- 0:n; y <- dbinom(x, n, p)
+hist(data, breaks=seq(-0.5, n + 0.5), freq=FALSE)
+points(x, y)
+```
+
+```{r}
+pbinom(3, 10, 3 / 10)
+```
+
+```{r}
+sum(dbinom(0:3, 10, 3 / 10))
+```
+
+```{r}
+F <- function(x) { punif(x, 0, 360) }
+c(F(200), F(150), F(200) - F(150))
+```
+
+```{r}
+f <- function(x) { 1 / 360 }
+integrate(Vectorize(f), 150, 200)
+```
+
+```{r}
+D(expression(x / 360), "x")
+```
+
+```{r}
+data <- runif(1000, 0, 360)
+hist(data) # 結果は割愛
+```
+
+```{r}
+data <- runif(1000, 0, 360)
+hist(data, freq = FALSE)
+curve(dunif(x, 0, 360), add = TRUE)
+```
+
+```{r}
+pnorm(6 + 3 * 2, 6, 2) - pnorm(6 - 3 * 2, 6, 2)
+```
+
+```{r}
+f <- function(x) { dnorm(x, 6, 2) }
+integrate(Vectorize(f), 6 - 3 * 2, 6 + 3 * 2)
+```
+
+```{r}
+curve(dnorm(x, 0, 1), -6, 6)
+curve(dnorm(x, 2, 1), -6, 6, add = TRUE)
+```
+
+```{r}
+curve(dnorm(x, 0, 1), -6, 6)
+curve(dnorm(x, 0, 2), -6, 6, add = TRUE)
+```
+
+```{r}
+Xs <- c(0, 100, 1000, 10000); Ps <- c(0.9, 0.08, 0.015, 0.005)
+data <- sample(Xs, 1000, replace = TRUE, prob = Ps)
+table(data)
+# data
+#     0   100  1000 10000
+#   912    70    13     5
+```
+
+```{r}
+r <- function() {
+  y <- runif(1)
+  ifelse(y <= 1 / 2, -sqrt(1 - 2 * y), sqrt(-1 + 2 * y))
+}
+data <- replicate(1000, r())
+hist(data)
+```
+
+```{r}
+Xs <- c(0, 100, 1000, 10000); Ps <- c(0.9, 0.08, 0.015, 0.005)
+sum(Xs * Ps)
+```
+
+```{r}
+mean(sample(Xs, 500000, replace = TRUE, prob = Ps))
+```
+
+```{r}
+f <- function(x) { abs(x) }
+g <- function(x) { x * f(x) }
+integrate(Vectorize(g), -1, 1)
+```
+
+```{r}
+sum((Xs - sum(Xs * Ps))^2 * Ps)
+```
+
+```{r}
+f <- function(x) { abs(x) }
+g <- function(x) { x * f(x) }
+u <- integrate(Vectorize(g), -1, 1)$value # Xの平均
+h <- function(x) { (x - u)^2 * f(x) }
+integrate(Vectorize(h), -1, 1)
+```
+
+# 9 多次元の確率分布
+
+
+```{r}
+n <- 20; p <- 3 / 10; mu <- n * p; sigma <- (n * p * (1 - p))**0.5
+plot(0:n, dbinom(0:n, n, p))
+curve(dnorm(x, mu, sigma), add = TRUE)
+```
+
+```{r}
+data <- replicate(10000, sum(runif(12)) - 6)
+hist(data, freq = FALSE)
+curve(dnorm(x), add = TRUE)
+```
+
+```{r}
+mu = c(3, 6); Sigma = rbind(c(5, 7), c(7, 13))
+Y1 <- seq(-8, 14, by = 0.1); Y2 <- seq(-5, 17, by = 0.1)
+data <- expand.grid(Y1 = Y1, Y2 = Y2)
+data$z = mnormt::dmnorm(data, mu, Sigma)
+lattice::wireframe(z ~ Y1 + Y2, data)
+```
+
+```{r}
+contour(Y1, Y2, matrix(data$z, nrow = length(Y1)))
+```
+
+# 10 推測統計
+
+
+```{r}
+mu <- 2; sigma <- 3;
+data1 <- replicate(10000, mean(rnorm(5, mu, sigma)))
+data2 <- replicate(10000, mean(rnorm(50, mu, sigma)))
+```
+
+```{r}
+par(mfrow = c(1, 2)); hist(data1); hist(data2); par(mfrow = c(1, 1))
+```
+
+```{r}
+data1 <- replicate(10000, var(rnorm(5, mu, sigma)))
+data2 <- replicate(10000, var(rnorm(50, mu, sigma)))
+c(mean(data1), var(data1), mean(data2), var(data2))
+```
+
+```{r}
+par(mfrow = c(1, 2)); hist(data1); hist(data2); par(mfrow = c(1, 1))
+```
+
+```{r}
+n <- 4; mu <- 5; sigma <- 7
+f <- function(x) { (n - 1) * var(x) / sigma^2 }
+data <- replicate(10000, f(rnorm(n, mu, sigma)))
+hist(data, freq = FALSE)
+curve(dchisq(x, n - 1), add = TRUE)
+```
+
+```{r}
+n <- 4; mu <- 5; sigma <- 7
+t <- function(x) { (mean(x) - mu) / sqrt(var(x) / n) }
+data <- replicate(10000, t(rnorm(n, mu, sigma)))
+hist(data, freq = FALSE, xlim = c(-4, 4),
+     breaks = seq(1.1 * min(data), 1.1 * max(data), 0.5))
+curve(dt(x, n - 1), add = TRUE)
+```
+
+```{r}
+m <- 5; muX <- 2; sigmaX <- 3; n <- 7; muY <- 3; sigmaY <- 2;
+f <- function(x, y) { (var(x) / sigmaX^2) / (var(y) / sigmaY^2) }
+data <- replicate(10000, f(rnorm(m, muX, sigmaX), rnorm(n, muX, sigmaY)))
+hist(data, freq = FALSE, xlim = c(0, 5),
+     breaks = seq(0, 1.2 * max(data), 0.2))
+curve(df(x, m - 1, n - 1), add = TRUE)
+```
+
+```{r}
+n <- 15; p0 <- 4 / 10; exactci::binom.exact(2, n, p0, tsmethod = "minlike")
+```
+
+```{r}
+exactci::binom.exact(2, n, p0, tsmethod = "minlike", alternative = "less")
+```
+
+```{r}
+n <- 15; p0 <- 4 / 10; mu0 <- n * p0; sigma0 <- sqrt(n * p0 * (1 - p0))
+2 * pnorm(2, mu0, sigma0)
+```
+
+```{r}
+alpha <- 5 / 100; qnorm(c(alpha / 2, 1 - alpha / 2), mu0, sigma0)
+```
+
+```{r}
+x <- c(24.2, 25.3, 26.2, 25.7, 24.4, 25.1, 25.6); mu0 <- 25
+t.test(x, mu = mu0)
+```
+
+```{r}
+m <- mean(x); s2 <- var(x); n <- length(x)
+t <- (m - mu0) / sqrt(s2 / n); c <- pt(t, n - 1)
+2 * min(c, 1 - c)
+```
+
+```{r}
+(region <- qt(c(alpha / 2, 1 - alpha / 2), n - 1))
+```
+
+```{r}
+t.test(x)
+```
+
+```{r}
+x <- c(25, 24, 25, 26); y <- c(23, 18, 22, 28, 17, 25, 19, 16);
+t.test(x, y, alternative = "greater", var.equal = FALSE)
+```
+
+```{r}
+x <- c(25, 24, 25, 26); y <- c(23, 18, 22, 28, 17, 25, 19, 16)
+var.test(x, y)
+```
+
+```{r}
+f <- var(x) / var(y); m <- length(x); n <- length(y);
+c <- pf(f, m - 1, n - 1)
+c(f, 2 * min(c, 1 - c))
+```
+
+```{r}
+alpha = 0.05;
+c(qf(c(alpha / 2, 1 - alpha / 2), m - 1, n - 1))
+```
+
+# 11 線形回帰分析
+
+
+```{r}
+data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
+                   y = c(3, 6, 3, 6))
+model <- lm(y ~ x1 + x2, data)
+summary(model)
+# Call:
+# lm(formula = y ~ x1 + x2, data = data.frame(x1, x2, y))
+#
+# Residuals:
+#          1          2          3          4
+#  2.776e-16  1.000e+00 -2.000e+00  1.000e+00
+#
+# Coefficients:
+#             Estimate Std. Error t value Pr(>|t|)
+# (Intercept)    3.000      3.000   1.000    0.500
+# x1            -4.000      7.681  -0.521    0.694
+# x2             2.000      3.317   0.603    0.655
+#
+# Residual standard error: 2.449 on 1 degrees of freedom
+# Multiple R-squared:  0.3333,	Adjusted R-squared:     -1
+# F-statistic:  0.25 on 2 and 1 DF,  p-value: 0.8165
+```
+
+```{r}
+predict(model, list(x1 = 1.5, x2 = 4))
+```
+
+```{r}
+x1 <- c(1, 3, 6, 10); y <- c(7, 1, 6, 14)
+L <- function(b) {
+  e <- y - (b[1] + b[2] * x1)
+  sum(e * e)
+}
+optim(c(0, 0), L)
+```
+
+```{r}
+data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
+                   y = c(3, 6, 3, 6))
+X <- model.matrix(y ~ ., data)
+solve(t(X) %*% X) %*% t(X) %*% y
+```
+
+```{r}
+MASS::ginv(X) %*% y
+```
+
+```{r}
+data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
+                   y = c(3, 6, 3, 6))
+model <- lm(y ~ x1 + x2, data)
+summary(model)$r.squared
+```
+
+```{r}
+x1 <- c(1, 3, 6, 10); y <- c(7, 1, 6, 14); data <- data.frame(x1, y)
+X <- model.matrix(y ~ x1, data)
+yh <- X %*% MASS::ginv(X) %*% y
+eh <- y - yh; fh <- yh - mean(y); g <- y - mean(y)
+(R2 <- 1 - sum(eh^2) / sum(g^2))
+```
+
+```{r}
+c(all.equal(mean(eh), 0),                             # 特徴1
+  all.equal(mean(yh), mean(y)),                       # 特徴2
+  all.equal(sum(g * g), sum(fh * fh) + sum(eh * eh)), # 特徴3
+  all.equal(R2, sum(fh * fh) / sum(g * g)),           # 特徴4
+  all.equal(R2, cor(y, yh[, 1])^2),                   # 特徴5
+  0 <= R2 & R2 <= 1,                                  # 特徴6
+  all.equal(cor(y, yh[, 1]), cor(y, data$x1)))        # 特徴7
+```
+
+```{r}
+data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
+                   y = c(3, 6, 3, 6))
+model <- lm(y ~ x1 + x2, data)
+sigma(model)^2
+```
+
+```{r}
+data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
+                   y = c(3, 6, 3, 6))
+model <- lm(y ~ ., data)
+summary(model)
+# F-statistic:  0.25 on 2 and 1 DF,  p-value: 0.8165
+```
+
+```{r}
+n <- nrow(data); p <- ncol(data); y <- data$y
+X <- model.matrix(y ~ ., data)
+yh <- X %*% MASS::ginv(X) %*% y; e <- y - yh
+F <- sum((yh - mean(y))^2) / (p - 1) / (sum(e * e) / (n - p))
+c(F, 1 - pf(F, p - 1, n - p))
+```
+
+```{r}
+data <- data.frame(x1 = c(35, 45, 55, 65, 75),
+                   y = c(114, 124, 143, 158, 166))
+model <- lm(y ~ x1, data); level <- 0.95
+(interval <- confint(model, level = level))
+```
+
+```{r}
+plot(ellipse::ellipse(model, level = level), type = "l")
+do.call(rect, as.list(interval))
+```
+
+```{r}
+data <- data.frame(x1 = c(35, 45, 55, 65, 75), x2 = c(2, 3, 5, 7, 11),
+                   y = c(114, 124, 143, 158, 166))
+model0 <- lm(y ~ x1, data)
+model1 <- lm(y ~ x1 + x2, data)
+s0 <- summary(model0); s1 <- summary(model1)
+matrix(c(s0$r.squared, s1$r.squared,
+         s0$adj.r.squared, s1$adj.r.squared), nrow = 2)
+```
+
+```{r}
+data <- data.frame(x1 = c(35, 45, 55, 65, 75),
+                   y = c(114, 124, 143, 158, 166))
+model <- lm(y ~ x1, data)
+x1 <- seq(35, 75, length.out = 100)
+ci <- predict(model, data.frame(x1), level = 0.95, interval = "confidence")
+plot(data)
+lines(x1, ci[, "fit"], type='l')
+lines(x1, ci[, "lwr"], type='l')
+lines(x1, ci[, "upr"], type='l')
+```
+
+```{r}
+library(ggplot2)
+ggplot(data, aes(x1, y)) + geom_point() +
+  stat_smooth(formula = y ~ x, method = "lm", level = 0.95)
+```
+
+# 12 関数の極限と連続性
+
+
+# 13 微分
+
+
+# 14 積分
+
+
+```{r}
+f <- function(x) { -x^2 + 4 * x + 1 }
+integrate(f, 1, 4)
+```
+
+# 15 多変数関数の微分積分
+
+
+# 16 ベクトル
+
+
+```{r}
+100 * c(1, 2) + 10 * c(3, 1)
+```
+
+```{r}
+a = c(0.1 + 0.1 + 0.1, 1); b = c(0.3, 1)
+all.equal(a, b)
+```
+
+```{r}
+a <- c(3, 4)
+norm(a, type = "2")
+```
+
+```{r}
+a = c(3, 4)
+a / norm(a, type="2")
+```
+
+```{r}
+a <- c(1, 0); b <- c(1, 1)
+acos(sum(a * b) / (norm(a, type = "2") * norm(b, type = "2")))
+```
+
+# 17 行列
+
+
+```{r}
+(A <- rbind(c(1, 2, 0), c(0, 3, 4)))
+```
+
+```{r}
+(A <- cbind(c(1, 0), c(2, 3), c(0, 4)))
+```
+
+```{r}
+isSymmetric(rbind(c(1, 2), c(2, 3)))
+```
+
+```{r}
+A = rbind(c(11, 12, 13), c(21, 22, 23), c(31, 32, 33))
+```
+
+```{r}
+A[, 3]
+```
+
+```{r}
+A[2, ]
+```
+
+```{r}
+A[1:2, 1:2]
+```
+
+```{r}
+i = 1; j = 1; A[1:i, 1:j] # 数（1次元ベクトル）
+i = 1; j = 2; A[1:i, 1:j] # 2次元ベクトル
+i = 2; j = 1; A[1:i, 1:j] # 2次元ベクトル
+i = 2; j = 2; A[1:i, 1:j] # 2×2行列
+```
+
+```{r}
+i = 1; j = 1; A[1:i, 1:j, drop = FALSE] # 1×1行列
+i = 1; j = 2; A[1:i, 1:j, drop = FALSE] # 1×2行列
+i = 2; j = 1; A[1:i, 1:j, drop = FALSE] # 2×1行列
+i = 2; j = 2; A[1:i, 1:j, drop = FALSE] # 2×2行列
+```
+
+```{r}
+10 * rbind(c(2, 3), c(5, 7))
+```
+
+```{r}
+rbind(c(10, 20), c(30, 40)) + rbind(c(2, 3), c(4, 5))
+```
+
+```{r}
+A <- rbind(c(2, 3), c(5, 7)); B <- rbind(c(1, 2), c(3, 4))
+A %*% B
+```
+
+```{r}
+A <- rbind(c(2, 3), c(5, 7)); b = c(1, 3)
+A %*% b
+```
+
+```{r}
+b %*% A
+```
+
+```{r}
+A <- rbind(c(3, 2), c(1, 2)); b <- c(8, 4)
+solve(A) %*% b
+```
+
+```{r}
+pracma::rref(rbind(c(4, 2, 8), c(2, 1, 4)))
+```
+
+# 18 ベクトル空間
+
+
+```{r}
+A = rbind(c(1, 0), c(1, 1), c(0, 1));
+tmp <- qr(A); Q <- qr.Q(tmp); R <- qr.R(tmp)
+print(Q); print(R)
+```
+
+```{r}
+all.equal(A, Q %*% R)
+```
+
+```{r}
+A = rbind(c(1, 0), c(1, 1), c(0, 1));
+MASS::Null(A) # MASS::Null(t(A))ではない．
+```
+
+# 19 固有値と固有ベクトル
+
+
+```{r}
+A <- rbind(c(2, 1), c(4, -1))
+(eigs <- eigen(A))
+```
+
+```{r}
+S <- rbind(c(2, 2, -2), c(2, 5, -4), c(-2, -4, 5))
+tmp <- svd(S); Q <- tmp$u; L <- diag(tmp$d); V <- tmp$v
+c(all.equal(S, Q %*% L %*% t(V)), all.equal(S, Q %*% L %*% t(Q)))
+```
+
+```{r}
+S <- rbind(c(2, 2, -2), c(2, 5, -4), c(-2, -4, 5))
+tmp <- eigen(S)       # 固有値・固有ベクトル
+Q <- tmp$vectors      # 正規直交な固有ベクトル
+L <- diag(tmp$values) # 対角行列
+all.equal(S, Q %*% L %*% t(Q))
+```
+
+```{r}
+matrixcalc::is.positive.semi.definite(rbind(c(4, 2), c(2, 1)))
+```
+
+```{r}
+A <- rbind(c(4, 2), c(2, 1))
+all(eigen(A)$values >= 0)
+```
+
+```{r}
+A = rbind(c(46, 46), c(46, 86))
+eigen(A)$vectors[, 1]
+```
+
+```{r}
+x1 <- c(1, 3, 6, 10); y <- c(7, 1, 6, 14)
+X <- t(rbind(x1 - mean(x1), y - mean(y)))
+(A <- t(X) %*% X)
+```
+
+```{r}
+X <- cbind(c(-4, -2, 1, 5), c(0, -6, -1, 7))
+svd(X)$v[, 1]
+```
+
+```{r}
+data <- data.frame(x1 = c(1, 3, 6, 10), y = c(7, 1, 6, 14))
+prcomp(data)$rotation[, 1]
+```
+
+# 20 特異値分解と疑似逆行列
+
+
+```{r}
+A <- rbind(c(1, 0), c(1, 1), c(0, 1))
+tmp <- svd(A)
+U <- tmp$u; s <- tmp$d; S <- diag(s); V <- tmp$v
+print(U); print(S); print(t(V))
+```
+
+```{r}
+all.equal(A, U %*% S %*% t(V))
+```
+
+```{r}
+A <- rbind(c(1, 0), c(1, 1), c(0, 1))
+G <- t(A) %*% A                         # 1
+eigs <- eigen(G); vals = eigs$values    # 2
+s <- sqrt(vals[vals > 0]); S <- diag(s) # 3
+r <- length(s)                          # 4
+V <- eigs$vectors[, 1:r]                # 5
+U <- A %*% V %*% solve(S)               # 6
+print(U); print(S); print(t(V)); print(U %*% S %*% t(V))
+```
+
+```{r}
+A <- rbind(c(1, 0), c(1, 1), c(0, 1)); b <- c(2, 0, 2)
+MASS::ginv(A) %*% b
+```
+
