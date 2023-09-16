@@ -1,10 +1,12 @@
 bak
+work
 .ipynb_checkpoints
 *.txt
 *.py
 *.sh
 union.*
 wolframalpha.*
-mathematica
 python.md
 r.md
+mathematica.md
+

@@ -8,3 +8,5 @@
 [Python (.ipynb)](code/python.ipynb)|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/python.ipynb)
 [R (.ipynb)](code/r.ipynb)|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/r.ipynb)
 [R (.Rmd)](code/r.Rmd)
+[Mathematica (.nb)](code/mathematica.nb)
+[Mathematica (.ipynb)](code/mathematica.ipynb)
