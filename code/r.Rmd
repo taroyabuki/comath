@@ -913,7 +913,7 @@ A <- rbind(c(2, 1), c(4, -1))
 ```{r}
 S <- rbind(c(2, 2, -2), c(2, 5, -4), c(-2, -4, 5))
 tmp <- svd(S); Q <- tmp$u; L <- diag(tmp$d); V <- tmp$v
-print(Q); Print(L), print(Q %*% L %*% t(Q))
+print(Q); print(L); print(Q %*% L %*% t(Q))
 ```
 
 ```{r}
@@ -921,7 +921,7 @@ S <- rbind(c(2, 2, -2), c(2, 5, -4), c(-2, -4, 5))
 tmp <- eigen(S)       # 固有値・固有ベクトル
 Q <- tmp$vectors      # 正規直交な固有ベクトル
 L <- diag(tmp$values) # 対角行列
-print(Q); Print(L), print(Q %*% L %*% t(Q))
+print(Q); print(L); print(Q %*% L %*% t(Q))
 ```
 
 ```{r}
