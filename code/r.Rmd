@@ -895,11 +895,7 @@ pracma::rref(rbind(c(4, 2, 8), c(2, 1, 4)))
 ```{r}
 A = rbind(c(1, 0), c(1, 1), c(0, 1));
 tmp <- qr(A); Q <- qr.Q(tmp); R <- qr.R(tmp)
-print(Q); print(R)
-```
-
-```{r}
-all.equal(A, Q %*% R)
+print(Q); print(R); print(Q %*% R)
 ```
 
 ```{r}
@@ -917,7 +913,7 @@ A <- rbind(c(2, 1), c(4, -1))
 ```{r}
 S <- rbind(c(2, 2, -2), c(2, 5, -4), c(-2, -4, 5))
 tmp <- svd(S); Q <- tmp$u; L <- diag(tmp$d); V <- tmp$v
-c(all.equal(S, Q %*% L %*% t(V)), all.equal(S, Q %*% L %*% t(Q)))
+print(Q); Print(L), print(Q %*% L %*% t(Q))
 ```
 
 ```{r}
@@ -925,7 +921,7 @@ S <- rbind(c(2, 2, -2), c(2, 5, -4), c(-2, -4, 5))
 tmp <- eigen(S)       # 固有値・固有ベクトル
 Q <- tmp$vectors      # 正規直交な固有ベクトル
 L <- diag(tmp$values) # 対角行列
-all.equal(S, Q %*% L %*% t(Q))
+print(Q); Print(L), print(Q %*% L %*% t(Q))
 ```
 
 ```{r}
@@ -949,7 +945,6 @@ X <- t(rbind(x1 - mean(x1), y - mean(y)))
 ```
 
 ```{r}
-X <- cbind(c(-4, -2, 1, 5), c(0, -6, -1, 7))
 svd(X)$v[, 1]
 ```
 
@@ -964,11 +959,7 @@ prcomp(data)$rotation[, 1]
 A <- rbind(c(1, 0), c(1, 1), c(0, 1))
 tmp <- svd(A)
 U <- tmp$u; s <- tmp$d; S <- diag(s); V <- tmp$v
-print(U); print(S); print(t(V))
-```
-
-```{r}
-all.equal(A, U %*% S %*% t(V))
+print(U); print(S); print(t(V)); print(U %*% S %*% t(V))
 ```
 
 ```{r}
