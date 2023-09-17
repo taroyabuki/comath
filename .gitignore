@@ -1,5 +1,5 @@
-.bak
 .ipynb_checkpoints
+*.bak
 *.py
 *.sh
 *.txt
