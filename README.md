@@ -13,6 +13,10 @@
 
 JupyterLabやGoogle Colabでは「 &#8801;」のようなアイコン，RStudioでは「Outline」をクリックすると，目次が表示されます．
 
+### そのほかのコード
+
+- 1.2.2項 [Pythonのモジュールの読み込み](code/imports.py)
+
 ## リンク集
 
 関連箇所|リンク
