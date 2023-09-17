@@ -11,6 +11,8 @@
 [Mathematica (.nb)](code/mathematica.nb)
 [Wolfram Language 13.3 (.ipynb)](code/mathematica.ipynb)
 
+JupyterLabやGoogle Colabでは「 &#8801;」のようなアイコン，RStudioでは「Outline」をクリックすると，目次が表示されます．
+
 ## リンク集
 
 関連箇所|リンク
