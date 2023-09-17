@@ -8,8 +8,5 @@ md2nb.*
 python.md
 r.md
 union.*
-wolframalpha.bak
-wolframalpha.nb
-wolframalpha.py
-wolframalpha.sh
+wolframalpha.*
 work

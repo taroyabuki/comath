@@ -1,9 +1,10 @@
+章タイトル→保存結果の閲覧，各項目→Wolfram|Alphaへの問合せ
 
-# [1 実行環境](wolframalpha/01)
+# [1 実行環境](01)
 - [factor 6x^2\-24](https://www.wolframalpha.com/input?i=factor%206x%5E2-24)
 - [6x^2\-24の因数分解](https://www.wolframalpha.com/input?i=6x%5E2-24%E3%81%AE%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3)
 
-# [2 数と変数](wolframalpha/02)
+# [2 数と変数](02)
 - [2 \* \(\-3\)](https://www.wolframalpha.com/input?i=2%20%2A%20%28-3%29)
 - [2 \(\-3\)](https://www.wolframalpha.com/input?i=2%20%28-3%29)
 - [\(1 \+ 2\) \* 3](https://www.wolframalpha.com/input?i=%281%20%2B%202%29%20%2A%203)
@@ -25,13 +26,13 @@
 - [0\.1 \+ 0\.1 \+ 0\.1 == 0\.3](https://www.wolframalpha.com/input?i=0.1%20%2B%200.1%20%2B%200.1%20%3D%3D%200.3)
 - [1/10 \+ 1/10 \+ 1/10](https://www.wolframalpha.com/input?i=1%2F10%20%2B%201%2F10%20%2B%201%2F10)
 
-# [3 データ構造](wolframalpha/03)
+# [3 データ構造](03)
 - [10\{2,3\}](https://www.wolframalpha.com/input?i=10%7B2%2C3%7D)
 - [\{10,20\}\+\{2,3\}](https://www.wolframalpha.com/input?i=%7B10%2C20%7D%2B%7B2%2C3%7D)
 - [v\+1 where v=\{2,3\}](https://www.wolframalpha.com/input?i=v%2B1%20where%20v%3D%7B2%2C3%7D)
 - [\{10,20\}\.\{2,3\}](https://www.wolframalpha.com/input?i=%7B10%2C20%7D.%7B2%2C3%7D)
 
-# [4 可視化と方程式](wolframalpha/04)
+# [4 可視化と方程式](04)
 - [plot x^2\+2x\-4,x=\-5\.\.3](https://www.wolframalpha.com/input?i=plot%20x%5E2%2B2x-4%2Cx%3D-5..3)
 - [plot x^2\+y^2,x=\-1\.\.1,y=\-1\.\.1](https://www.wolframalpha.com/input?i=plot%20x%5E2%2By%5E2%2Cx%3D-1..1%2Cy%3D-1..1)
 - [x^2\+y^2=1](https://www.wolframalpha.com/input?i=x%5E2%2By%5E2%3D1)
@@ -43,21 +44,21 @@
 - [solve 2^x\+sin x=0 for x=\-2\.\.0](https://www.wolframalpha.com/input?i=solve%202%5Ex%2Bsin%20x%3D0%20for%20x%3D-2..0)
 - [x^2\+2x\-4<0](https://www.wolframalpha.com/input?i=x%5E2%2B2x-4%3C0)
 
-# [5 論理式](wolframalpha/05)
+# [5 論理式](05)
 
-# [6 1次元のデータ](wolframalpha/06)
+# [6 1次元のデータ](06)
 - [histogram \{36,43,53,55,56,56,57,60,61,73\}](https://www.wolframalpha.com/input?i=histogram%20%7B36%2C43%2C53%2C55%2C56%2C56%2C57%2C60%2C61%2C73%7D)
 - [mean \{36,43,53,55,56,56,57,60,61,73\}](https://www.wolframalpha.com/input?i=mean%20%7B36%2C43%2C53%2C55%2C56%2C56%2C57%2C60%2C61%2C73%7D)
 - [var \{36,43,53,55,56,56,57,60,61,73\}](https://www.wolframalpha.com/input?i=var%20%7B36%2C43%2C53%2C55%2C56%2C56%2C57%2C60%2C61%2C73%7D)
 - [standardize \{36,43,53,55,56,56,57,60,61,73\}](https://www.wolframalpha.com/input?i=standardize%20%7B36%2C43%2C53%2C55%2C56%2C56%2C57%2C60%2C61%2C73%7D)
 
-# [7 2次元のデータ](wolframalpha/07)
+# [7 2次元のデータ](07)
 - [\{35,114\},\{45,124\},\{55,143\},\{65,158\},\{75,166\}](https://www.wolframalpha.com/input?i=%7B35%2C114%7D%2C%7B45%2C124%7D%2C%7B55%2C143%7D%2C%7B65%2C158%7D%2C%7B75%2C166%7D)
 - [covariance \{35,45,55,65,75\},\{114,124,143,158,166\}](https://www.wolframalpha.com/input?i=covariance%20%7B35%2C45%2C55%2C65%2C75%7D%2C%7B114%2C124%2C143%2C158%2C166%7D)
 - [correlation \{35,45,55,65,75\},\{114,124,143,158,166\}](https://www.wolframalpha.com/input?i=correlation%20%7B35%2C45%2C55%2C65%2C75%7D%2C%7B114%2C124%2C143%2C158%2C166%7D)
 - [linear fit \{35,114\},\{45,124\},\{55,143\},\{65,158\},\{75,166\}](https://www.wolframalpha.com/input?i=linear%20fit%20%7B35%2C114%7D%2C%7B45%2C124%7D%2C%7B55%2C143%7D%2C%7B65%2C158%7D%2C%7B75%2C166%7D)
 
-# [8 確率変数と確率分布](wolframalpha/08)
+# [8 確率変数と確率分布](08)
 - [P\(X=2\),discrete uniform distribution min=1,max=6](https://www.wolframalpha.com/input?i=P%28X%3D2%29%2Cdiscrete%20uniform%20distribution%20min%3D1%2Cmax%3D6)
 - [P\(X=3\),distributed binomial distribution n=10,p=3/10](https://www.wolframalpha.com/input?i=P%28X%3D3%29%2Cdistributed%20binomial%20distribution%20n%3D10%2Cp%3D3%2F10)
 - [binomial distribution](https://www.wolframalpha.com/input?i=binomial%20distribution)
@@ -70,18 +71,18 @@
 - [P\(mu\-3sigma<=X<=mu\+3sigma\),normal distribution](https://www.wolframalpha.com/input?i=P%28mu-3sigma%3C%3DX%3C%3Dmu%2B3sigma%29%2Cnormal%20distribution)
 - [normal distribution](https://www.wolframalpha.com/input?i=normal%20distribution)
 
-# [9 多次元の確率分布](wolframalpha/09)
+# [9 多次元の確率分布](09)
 
-# [10 推測統計](wolframalpha/10)
+# [10 推測統計](10)
 - [test for binomial parameter p0=4/10,p\-hat=2/15,n=15](https://www.wolframalpha.com/input?i=test%20for%20binomial%20parameter%20p0%3D4%2F10%2Cp-hat%3D2%2F15%2Cn%3D15)
 - [X~normal distribution\(15\*4/10,sqrt\(15\*4/10\(1\-4/10\)\)\),P\(X<=2\)\*2](https://www.wolframalpha.com/input?i=X~normal%20distribution%2815%2A4%2F10%2Csqrt%2815%2A4%2F10%281-4%2F10%29%29%29%2CP%28X%3C%3D2%29%2A2)
 - [t\-test mu0=25,xbar=25\.21429,s=0\.7151423,n=7](https://www.wolframalpha.com/input?i=t-test%20mu0%3D25%2Cxbar%3D25.21429%2Cs%3D0.7151423%2Cn%3D7)
 
-# [11 線形回帰分析](wolframalpha/11)
+# [11 線形回帰分析](11)
 - [linear fit \{1,2,3\},\{1,3,6\},\{2,5,3\},\{3,7,6\}](https://www.wolframalpha.com/input?i=linear%20fit%20%7B1%2C2%2C3%7D%2C%7B1%2C3%2C6%7D%2C%7B2%2C5%2C3%7D%2C%7B3%2C7%2C6%7D)
 - [PseudoInverse\[\(\{\{1,1,2\},\{1,1,3\},\{1,2,5\},\{1,3,7\}\}\)\]\.\{3,6,3,6\}](https://www.wolframalpha.com/input?i=PseudoInverse%5B%28%7B%7B1%2C1%2C2%7D%2C%7B1%2C1%2C3%7D%2C%7B1%2C2%2C5%7D%2C%7B1%2C3%2C7%7D%7D%29%5D.%7B3%2C6%2C3%2C6%7D)
 
-# [12 関数の極限と連続性](wolframalpha/12)
+# [12 関数の極限と連続性](12)
 - [lim f\(x\) as x\->1 where f\(x\)=2x\-3](https://www.wolframalpha.com/input?i=lim%20f%28x%29%20as%20x-%3E1%20where%20f%28x%29%3D2x-3)
 - [lim 2x\-3 as x\->1](https://www.wolframalpha.com/input?i=lim%202x-3%20as%20x-%3E1)
 - [lim g\(x\) as x\->sqrt\(2\) where g\(x\)=\(x^2\-2\)/\(x\-sqrt\(2\)\)](https://www.wolframalpha.com/input?i=lim%20g%28x%29%20as%20x-%3Esqrt%282%29%20where%20g%28x%29%3D%28x%5E2-2%29%2F%28x-sqrt%282%29%29)
@@ -89,7 +90,7 @@
 - [limit 1/x^2 as x\->0](https://www.wolframalpha.com/input?i=limit%201%2Fx%5E2%20as%20x-%3E0)
 - [lim \|x\|/x as x\->0\+0](https://www.wolframalpha.com/input?i=lim%20%7Cx%7C%2Fx%20as%20x-%3E0%2B0)
 
-# [13 微分](wolframalpha/13)
+# [13 微分](13)
 - [f\(x\)=x^3,f'\(1\)](https://www.wolframalpha.com/input?i=f%28x%29%3Dx%5E3%2Cf%27%281%29)
 - [lim\_\(h\->0\) \(f\(a\+h\)\-f\(a\)\)/h where f\(x\)=x^3,a=1](https://www.wolframalpha.com/input?i=lim_%28h-%3E0%29%20%28f%28a%2Bh%29-f%28a%29%29%2Fh%20where%20f%28x%29%3Dx%5E3%2Ca%3D1)
 - [f\(x\)=x^3,f'\(x\)](https://www.wolframalpha.com/input?i=f%28x%29%3Dx%5E3%2Cf%27%28x%29)
@@ -98,7 +99,7 @@
 - [series sqrt\(1\+x\) to order 7](https://www.wolframalpha.com/input?i=series%20sqrt%281%2Bx%29%20to%20order%207)
 - [local extrema of x^3\-12x](https://www.wolframalpha.com/input?i=local%20extrema%20of%20x%5E3-12x)
 
-# [14 積分](wolframalpha/14)
+# [14 積分](14)
 - [integral\_1^4 \(\-x^2\+4x\+1\) dx](https://www.wolframalpha.com/input?i=integral_1%5E4%20%28-x%5E2%2B4x%2B1%29%20dx)
 - [integral\_a^x \(\-t^2\+4t\+1\) dt](https://www.wolframalpha.com/input?i=integral_a%5Ex%20%28-t%5E2%2B4t%2B1%29%20dt)
 - [integral \-x^2\+4x\+1 dx](https://www.wolframalpha.com/input?i=integral%20-x%5E2%2B4x%2B1%20dx)
@@ -110,7 +111,7 @@
 - [int 1/x^a x=0\.\.1](https://www.wolframalpha.com/input?i=int%201%2Fx%5Ea%20x%3D0..1)
 - [int 1/x^a x=1\.\.infinity](https://www.wolframalpha.com/input?i=int%201%2Fx%5Ea%20x%3D1..infinity)
 
-# [15 多変数関数の微分積分](wolframalpha/15)
+# [15 多変数関数の微分積分](15)
 - [lim f\(x1,x2\) as \(x1,x2\)\->\(0,0\) where f\(x1,x2\)=x1 x2^2/\(x1^2\+x2^2\)](https://www.wolframalpha.com/input?i=lim%20f%28x1%2Cx2%29%20as%20%28x1%2Cx2%29-%3E%280%2C0%29%20where%20f%28x1%2Cx2%29%3Dx1%20x2%5E2%2F%28x1%5E2%2Bx2%5E2%29)
 - [lim f\(x,y\) as \(x,y\)\->\(0,0\) where f\(x,y\)=x^2 y/\(x^4\+y^2\)](https://www.wolframalpha.com/input?i=lim%20f%28x%2Cy%29%20as%20%28x%2Cy%29-%3E%280%2C0%29%20where%20f%28x%2Cy%29%3Dx%5E2%20y%2F%28x%5E4%2By%5E2%29)
 - [d/dx 2\-x^2\-y^2,d/dy 2\-x^2\-y^2](https://www.wolframalpha.com/input?i=d%2Fdx%202-x%5E2-y%5E2%2Cd%2Fdy%202-x%5E2-y%5E2)
@@ -120,7 +121,7 @@
 - [integrate f\(x,y\) dy dx y=0\.\.x,x=0\.\.1 where f\(x,y\)=x^2\+y^2](https://www.wolframalpha.com/input?i=integrate%20f%28x%2Cy%29%20dy%20dx%20y%3D0..x%2Cx%3D0..1%20where%20f%28x%2Cy%29%3Dx%5E2%2By%5E2)
 - [integrate f\(x,y\) dx dy x=y\.\.1,y=0\.\.1 where f\(x,y\)=x^2\+y^2](https://www.wolframalpha.com/input?i=integrate%20f%28x%2Cy%29%20dx%20dy%20x%3Dy..1%2Cy%3D0..1%20where%20f%28x%2Cy%29%3Dx%5E2%2By%5E2)
 
-# [16 ベクトル](wolframalpha/16)
+# [16 ベクトル](16)
 - [100\{1,2\}\+10\{3,1\}](https://www.wolframalpha.com/input?i=100%7B1%2C2%7D%2B10%7B3%2C1%7D)
 - [a==b where a=\{1/10\+1/10\+1/10,1\}, b=\{3/10,1\}](https://www.wolframalpha.com/input?i=a%3D%3Db%20where%20a%3D%7B1%2F10%2B1%2F10%2B1%2F10%2C1%7D%2C%20b%3D%7B3%2F10%2C1%7D)
 - [norm \{3,4\}](https://www.wolframalpha.com/input?i=norm%20%7B3%2C4%7D)
@@ -129,7 +130,7 @@
 - [arccos\(a\.b/norm\(a\)/norm\(b\)\) where a=\{1,0\},b=\{1,1\}](https://www.wolframalpha.com/input?i=arccos%28a.b%2Fnorm%28a%29%2Fnorm%28b%29%29%20where%20a%3D%7B1%2C0%7D%2Cb%3D%7B1%2C1%7D)
 - [vector angle \{1,0\},\{1,1\}](https://www.wolframalpha.com/input?i=vector%20angle%20%7B1%2C0%7D%2C%7B1%2C1%7D)
 
-# [17 行列](wolframalpha/17)
+# [17 行列](17)
 - [\{\{1,2,0\},\{0,3,4\}\}](https://www.wolframalpha.com/input?i=%7B%7B1%2C2%2C0%7D%2C%7B0%2C3%2C4%7D%7D)
 - [symmetric matrix \{\{1,2\},\{2,3\}\}](https://www.wolframalpha.com/input?i=symmetric%20matrix%20%7B%7B1%2C2%7D%2C%7B2%2C3%7D%7D)
 - [10 \{\{2,3\},\{5,7\}\}](https://www.wolframalpha.com/input?i=10%20%7B%7B2%2C3%7D%2C%7B5%2C7%7D%7D)
@@ -140,7 +141,7 @@
 - [\(inverse \{\{3,2\},\{1,2\}\}\)\.\{8, 4\}](https://www.wolframalpha.com/input?i=%28inverse%20%7B%7B3%2C2%7D%2C%7B1%2C2%7D%7D%29.%7B8%2C%204%7D)
 - [row reduce \{\{4,2,8\},\{2,1,4\}\}](https://www.wolframalpha.com/input?i=row%20reduce%20%7B%7B4%2C2%2C8%7D%2C%7B2%2C1%2C4%7D%7D)
 
-# [18 ベクトル空間](wolframalpha/18)
+# [18 ベクトル空間](18)
 - [linear independence \{3,1\},\{2,2\}](https://www.wolframalpha.com/input?i=linear%20independence%20%7B3%2C1%7D%2C%7B2%2C2%7D)
 - [c1\{3,1\}\+c2\{2,2\}=\{0,0\}](https://www.wolframalpha.com/input?i=c1%7B3%2C1%7D%2Bc2%7B2%2C2%7D%3D%7B0%2C0%7D)
 - [row space \{\{1,2\}\}](https://www.wolframalpha.com/input?i=row%20space%20%7B%7B1%2C2%7D%7D)
@@ -149,7 +150,7 @@
 - [QR decomposition \{\{1,0,1\},\{1,1,0\},\{0,1,\-1\}\}](https://www.wolframalpha.com/input?i=QR%20decomposition%20%7B%7B1%2C0%2C1%7D%2C%7B1%2C1%2C0%7D%2C%7B0%2C1%2C-1%7D%7D)
 - [null space of transpose \{\{1,0\},\{1,1\},\{0,1\}\}](https://www.wolframalpha.com/input?i=null%20space%20of%20transpose%20%7B%7B1%2C0%7D%2C%7B1%2C1%7D%2C%7B0%2C1%7D%7D)
 
-# [19 固有値と固有ベクトル](wolframalpha/19)
+# [19 固有値と固有ベクトル](19)
 - [eigensystem \{\{2,1\},\{4,\-1\}\}](https://www.wolframalpha.com/input?i=eigensystem%20%7B%7B2%2C1%7D%2C%7B4%2C-1%7D%7D)
 - [solve det\(x IdentityMatrix\[2\]\-\{\{2,1\},\{4,\-1\}\}\)=0](https://www.wolframalpha.com/input?i=solve%20det%28x%20IdentityMatrix%5B2%5D-%7B%7B2%2C1%7D%2C%7B4%2C-1%7D%7D%29%3D0)
 - [solve \(3 IdentityMatrix\[2\]\-\{\{2,1\},\{4,\-1\}\}\)\.\{x,y\}=\{0,0\}](https://www.wolframalpha.com/input?i=solve%20%283%20IdentityMatrix%5B2%5D-%7B%7B2%2C1%7D%2C%7B4%2C-1%7D%7D%29.%7Bx%2Cy%7D%3D%7B0%2C0%7D)
@@ -158,6 +159,6 @@
 - [\{\{46,46\},\{46,48\}\}](https://www.wolframalpha.com/input?i=%7B%7B46%2C46%7D%2C%7B46%2C48%7D%7D)
 - [svd \{\{\-4,0\},\{\-2,\-6\},\{1,\-1\},\{5,7\}\}](https://www.wolframalpha.com/input?i=svd%20%7B%7B-4%2C0%7D%2C%7B-2%2C-6%7D%2C%7B1%2C-1%7D%2C%7B5%2C7%7D%7D)
 
-# [20 特異値分解と疑似逆行列](wolframalpha/20)
+# [20 特異値分解と疑似逆行列](20)
 - [svd \{\{1,0\},\{1,1\},\{0,1\}\}](https://www.wolframalpha.com/input?i=svd%20%7B%7B1%2C0%7D%2C%7B1%2C1%7D%2C%7B0%2C1%7D%7D)
 - [\(pseudoinverse \{\{1,0\},\{1,1\},\{0,1\}\}\)\.\{2,0,2\}](https://www.wolframalpha.com/input?i=%28pseudoinverse%20%7B%7B1%2C0%7D%2C%7B1%2C1%7D%2C%7B0%2C1%7D%7D%29.%7B2%2C0%2C2%7D)
