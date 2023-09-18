@@ -16,6 +16,3 @@ Do[
     cell = "",
     If[in, cell = cell <> line <> "\n"]]]],
  {line, md}]
-
-SelectionMove[nb, All, Notebook];
-FrontEndExecute[FrontEndToken[nb, "SelectionCloseAllGroups"]];
