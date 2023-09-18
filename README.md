@@ -13,7 +13,7 @@ Wolfram言語|[Wolfram Cloud](https://www.wolframcloud.com)|無料|`Import["http
 Wolfram言語|Mathematica|[Raspberry Pi OS版は無料](https://www.wolfram.com/raspberry-pi/)|[mathematica.nb](code/mathematica/mathematica.nb) あるいは `Import["https://wolfr.am/1gw1HOigM", "NB"]`
 
 - Google ColabとWolfram Cloudは，無料で使えますが登録が必要です．
-- Google Colabでは「&#8801;」のようなアイコンをクリックすると，目次が表示されます．
+- Google Colabでは，「&#8801;」のようなアイコンをクリックすると，目次が表示されます．
 - Wolfram Cloudでは，新規ノートブックで`Import[...]`を評価すると，サンプルコードが読み込まれます．Ctrl-`A`（&#x2318;-`A`）で全選択→View→Close All Subgroupsで，みやすくなります．
 ### そのほかの環境
 
