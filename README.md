@@ -6,7 +6,7 @@
 
 システム|実行環境|コード
 --|--|--
-Wolfram\|Alpha|[Wolfram\|Alpha](https://www.wolframalpha.com/)|無料|[クエリと結果](code/wolframalpha)
+Wolfram\|Alpha|[Wolfram\|Alpha](https://www.wolframalpha.com/)|[クエリと結果](code/wolframalpha)
 Python|Google Colab|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/python.ipynb)
 R|Google Colab|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/r.ipynb)
 Wolfram言語|[Wolfram Cloud](https://www.wolframcloud.com)|`Import["https://wolfr.am/1gw1DVIUK", "NB"]`
