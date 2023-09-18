@@ -6,12 +6,13 @@
 
 システム|実行環境|メモ|コード
 --|--|--|--
-Wolfram\|Alpha|ウェブブラウザ|無料|[クエリ一覧](code/wolframalpha)
-Python|Google Colaboratory|無料（要登録）|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/python.ipynb)
-R|Google Colaboratory|無料（要登録）|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/r.ipynb)
-Wolfram言語|[Wolfram Cloud](https://www.wolframcloud.com)|無料（要登録）|`Import["https://wolfr.am/1gw1DVIUK"]`
+Wolfram\|Alpha|ウェブブラウザ|無料|[クエリと結果](code/wolframalpha)
+Python|Google Colab|無料|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/python.ipynb)
+R|Google Colab|無料|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/r.ipynb)
+Wolfram言語|[Wolfram Cloud](https://www.wolframcloud.com)|無料|`Import["https://wolfr.am/1gw1DVIUK"]`
 Wolfram言語|Mathematica|[Raspberry Pi OS版は無料](https://www.wolfram.com/raspberry-pi/)|[mathematica.nb](code/mathematica/mathematica.nb)
 
+- Google ColabとWolfram Cloudは無料ですが登録が必要です．
 - Google Colabでは「&#8801;」のようなアイコンをクリックすると，目次が表示されます．
 - Wolfram Cloudでは，新規ノートブックで表の`Import[...]`を評価すると，サンプルコードが読み込まれます．Ctrl-`A`で全選択→View→Close All Subgroupsで，みやすくなります．
 ### そのほかの環境
