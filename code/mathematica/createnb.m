@@ -1,6 +1,6 @@
 nb = EvaluationNotebook[];
 
-url = "https://raw.githubusercontent.com/taroyabuki/comath/main/code/mathematica.md";
+url = "https://raw.githubusercontent.com/taroyabuki/comath/main/code/mathematica/mathematica.md";
 
 md = Drop[Import[url, {"Text", "Lines"}], 6];
 

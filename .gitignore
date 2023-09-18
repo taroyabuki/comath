@@ -3,7 +3,6 @@
 *.sh
 *.txt
 bak
-mathematica.md
 mathematica.py
 md2nb.*
 python.md
