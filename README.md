@@ -14,17 +14,20 @@ Wolfram言語|Mathematica|[Raspberry Pi OS版は無料](https://www.wolfram.com/
 
 - Google ColabとWolfram Cloudは無料ですが登録が必要です．
 - Google Colabでは「&#8801;」のようなアイコンをクリックすると，目次が表示されます．
-- Wolfram Cloudでは，新規ノートブックで表の`Import[...]`を評価すると，サンプルコードが読み込まれます．Ctrl-`A`で全選択→View→Close All Subgroupsで，みやすくなります．
+- Wolfram Cloudでは，新規ノートブックで表の`Import[...]`を評価すると，サンプルコードが読み込まれます．Ctrl-`A`（&#x2318;-`A`）で全選択→View→Close All Subgroupsで，みやすくなります．
 ### そのほかの環境
 
 システム|実行環境|メモ|コード
 --|--|--|--
-Python|JupyterLab（例：[jupyter/datascience-notebook](https://hub.docker.com/r/jupyter/datascience-notebook)）|無料|[python.ipynb](code/python.ipynb)
-R|JupyterLab（例：[jupyter/datascience-notebook](https://hub.docker.com/r/jupyter/datascience-notebook)）|無料|[r.ipynb](code/r.ipynb)
-R|RStudio（例：[rocker/tidyverse](https://hub.docker.com/r/rocker/tidyverse)）|無料|[r.Rmd](code/r.Rmd)
-Wolfram言語 13.3|JupyterLab ([Wolfram Engine Community Edition](https://www.wolfram.com/engine/) + [Wolfram Language kernel for Jupyter notebooks](https://github.com/WolframResearch/WolframLanguageForJupyter))|無料|[wolfram.ipynb](code/mathematica/wolfram.ipynb)
+Python|JupyterLab|無料|[python.ipynb](code/python.ipynb)
+R|JupyterLab|無料|[r.ipynb](code/r.ipynb)
+R|RStudio|無料|[r.Rmd](code/r.Rmd)
+Wolfram言語 13.3|JupyterLab|無料|[wolfram.ipynb](code/mathematica/wolfram.ipynb)
 
 - JupyterLabでは「&#8801;」のようなアイコン，RStudioでは「Outline」をクリックすると，目次が表示されます．
+- JupyterLab（Python・R）をサポートするDockerイメージ，[jupyter/datascience-notebook](https://hub.docker.com/r/jupyter/datascience-notebook)を推奨します．
+- RStudioをサポートするDockerイメージ，[rocker/tidyverse](https://hub.docker.com/r/rocker/tidyverse)を推奨します．
+- JupyterLab（Wolfram言語）は，[Wolfram Engine Community Edition](https://www.wolfram.com/engine/)と[Wolfram Language kernel for Jupyter notebooks](https://github.com/WolframResearch/WolframLanguageForJupyter)の組合せで実現します．
 
 ### そのほかのコード
 
