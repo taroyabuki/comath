@@ -338,7 +338,7 @@ df[All, {"english", "math"}]
 ```
 
 ```code
-df[[All, "english"]]
+Normal[df[[All, "english"]]]
 ```
 
 ```code
