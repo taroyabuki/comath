@@ -110,6 +110,7 @@ f /. x -> 5
 ```
 
 ```code
+Clear[a, b, c, y];
 g = a + b;
 g /. {a -> x, b -> y}
 ```
