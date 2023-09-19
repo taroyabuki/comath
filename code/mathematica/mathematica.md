@@ -2051,7 +2051,7 @@ Transpose[Q] . Q
 ```code
 A = {{1, 0, 1}, {1, 1, 0}, {0, 1, -1}};
 {Qt, R} = QRDecomposition[A]; Q = Transpose[Qt];
-{MatrixForm[Q], MatrixForm[R], MatrixForm[Q . R]}
+{MatrixForm[Q], MatrixForm[R], A == Q . R}
 ```
 
 ```code
@@ -2085,7 +2085,8 @@ Clear[x, y]; Reduce[(3 IdentityMatrix[2] - A) . {x, y} == {0, 0}, {x, y}]
 ```code
 S = {{2, 2, -2}, {2, 5, -4}, {-2, -4, 5}};
 {Q, L, V} = SingularValueDecomposition[S];
-{MatrixForm[Q], MatrixForm[L], MatrixForm[Q . L . Transpose[Q]]}
+{MatrixForm[Q], MatrixForm[L],
+ S == Q . L . Transpose[Q], S == V . L . Transpose[V]}
 ```
 
 ```code
@@ -2093,7 +2094,7 @@ S = {{2, 2, -2}, {2, 5, -4}, {-2, -4, 5}};
 {vals, vecs} = Eigensystem[S];      (* 固有値・固有ベクトル *)
 Q = Transpose[Orthogonalize[vecs]]; (* 正規直交な固有ベクトル *)
 L = DiagonalMatrix[vals];           (* 対角行列 *)
-{MatrixForm[Q], MatrixForm[L], MatrixForm[Q . L . Transpose[Q]]}
+{MatrixForm[Q], MatrixForm[L], S == Q . L . Transpose[Q]}
 ```
 
 ```code
@@ -2129,9 +2130,8 @@ V[[All, 1]] // N
 
 ```code
 A = {{1, 0}, {1, 1}, {0, 1}};
-{U, S, V} = SingularValueDecomposition[A];
-{MatrixForm[U], MatrixForm[S], MatrixForm[Transpose[V]],
- MatrixForm[U . S . Transpose[V]]}
+{U, S, V} = SingularValueDecomposition[A]; Vt = Transpose[V];
+{MatrixForm[U], MatrixForm[S], MatrixForm[Vt], A == U . S . Vt}
 ```
 
 ```code
@@ -2142,7 +2142,7 @@ s = Sqrt[Select[vals, Positive]]; S = DiagonalMatrix[s]; (* 3 *)
 r = Length[s];                                           (* 4 *)
 Vt = Orthogonalize[Take[vecs, r]]; V = Transpose[Vt];    (* 5 *)
 U = A . V . Inverse[S];                                  (* 6 *)
-{MatrixForm[U], MatrixForm[S], MatrixForm[Vt], MatrixForm[U . S . Vt]}
+{MatrixForm[U], MatrixForm[S], MatrixForm[Vt], A == U . S . Vt}
 ```
 
 ```code
