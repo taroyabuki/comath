@@ -272,7 +272,7 @@ u
 ```
 
 ```code
-u = {10, 20}; v = {2, 3}
+u = {10, 20}; v = {2, 3};
 u + v
 ```
 
@@ -286,7 +286,7 @@ Table[x + 1, {x, v}]
 ```
 
 ```code
-u = {10, 20}; v = {2, 3}
+u = {10, 20}; v = {2, 3};
 u . v
 ```
 
@@ -307,16 +307,16 @@ KeyExistsQ[x, "apple"]
 
 ```code
 Clear[x];
-x["apple"] = "りんご"
-x["orange"] = "みかん"
+x["apple"] = "りんご";
+x["orange"] = "みかん";
 
 x["orange"] (* みかん *)
 
-x["grape"] = "ぶどう"
+x["grape"] = "ぶどう";
 x["grape"] (* ぶどう *)
 
 x["apple"] =.
-Head[x["apple"]] != x (* False *)
+Head[x["apple"]] =!= x (* False *)
 ```
 
 ```code
