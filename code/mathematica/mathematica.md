@@ -104,6 +104,7 @@ y (* 「x + 1」は「2 + 1」つまり3．*)
 ```
 
 ```code
+Clear[x]; (* xをリセットする．*)
 f = 2 x + 3;
 f /. x -> 5
 ```
@@ -1453,7 +1454,7 @@ Show[g1, g2, AspectRatio -> 1, Frame -> True]
 
 ```code
 A = {{1, 0}, {0, 1}}; u = {beta0, beta1};
-g3 = RegionPlot[ImplicitRegion[N[cond], {beta0, beta1}]];
+g3 = RegionPlot[ImplicitRegion[N[cond], Evaluate[u]]];
 Show[g1, g3, AspectRatio -> 1, Frame -> True]
 ```
 
