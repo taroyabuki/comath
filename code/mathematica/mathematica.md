@@ -230,11 +230,11 @@ Simplify[Sqrt[(x - 1)^2], x - 1 >= 0]
 ```
 
 ```code
-Clear[x];
 Reduce[Sqrt[(x - 1)^2] == x - 1, x, Reals]
 ```
 
 ```code
+Clear[a, b];
 Reduce[Sqrt[a] Sqrt[b] == Sqrt[a b], Reals]
 ```
 
