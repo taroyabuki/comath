@@ -374,7 +374,8 @@ ContourPlot[x^2 + y^2, {x, -1, 1}, {y, -1, 1}]
 ```
 
 ```code
-reg1 = ImplicitRegion[x^2 + y^2 == 1, {x, y}]; Clear[x, y];
+Clear[x, y];
+reg1 = ImplicitRegion[x^2 + y^2 == 1, {x, y}];
 Region[reg1, Axes -> True]
 ```
 
@@ -461,11 +462,11 @@ Reduce[expr]
 ```
 
 ```code
-Reduce[Implies[10 < x, 11 < x]]
+Reduce[Implies[x > 10, x > 11]]
 ```
 
 ```code
-Reduce[ForAll[x, Element[x, Reals], Implies[10 < x, 11 < x]]]
+Reduce[ForAll[x, Element[x, Reals], Implies[x > 10, x > 11]]]
 ```
 
 ```code
@@ -491,6 +492,7 @@ Reduce[Exists[x, x^2 == 2], Reals]
 
 ```code
 Reduce[Exists[x, Element[x, Rationals], x^2 == 2]]
+Reduce[Exists[x, x^2 == 2], Rationals]
 ```
 
 ```code
@@ -623,11 +625,11 @@ model[40]
 ```
 
 ```code
-Show[ListPlot[data], Plot[Normal[model], {x, 35, 75}]]
+Show[ListPlot[data], Plot[model[x], {x, 35, 75}]]
 ```
 
 ```code
-Clear[a, b];
+Clear[a, b, p, q, r, s, t, u];
 L = Total[(y - (a x + b))^2];
 tmp = Reduce[ForAll[{a, b}, L == p (a - q)^2 + r (b - (s a + t))^2 + u]]
 {q, s q + t} /. ToRules[tmp]
@@ -642,8 +644,8 @@ a = Covariance[x, y]/Variance[x]; b = Mean[y] - a Mean[x];
 anscombe = ExampleData[{"Statistics", "AnscombeRegressionLines"}];
 x1 = anscombe[[All, 1]]; y1 = anscombe[[All, 5]]; data = Thread[{x1, y1}];
 Correlation[x1, y1]
-Clear[x]; model = LinearModelFit[data, x, x]
-Show[ListPlot[data], Plot[Normal[model], {x, 0, 21}]]
+model = LinearModelFit[data, X, X]
+Show[ListPlot[data], Plot[model[x], {x, 0, 21}]]
 ```
 
 # 8 確率変数と確率分布
