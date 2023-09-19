@@ -217,6 +217,7 @@ Block[{Internal`$EqualTolerance = 0}, 0.1 + 0.1 + 0.1 == 0.3]
 ```
 
 ```code
+Clear[x];
 Simplify[Sin[x]^2 + Cos[x]^2]
 ```
 
