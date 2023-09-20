@@ -681,10 +681,11 @@ PDF[dist][3]
 ```
 
 ```code
-Probability[X == 3, Distributed[X, dist]] // N
+Probability[X == 3, Distributed[X, dist]]
 ```
 
 ```code
+Clear[n, p, x];
 dist = BinomialDistribution[n, p];
 PDF[dist][x]
 ```
@@ -702,7 +703,7 @@ Show[Histogram[data, {-0.5, n + 0.5, 1}, "PDF"],
 
 ```code
 dist = BinomialDistribution[10, 3/10];
-CDF[dist][3] // N
+CDF[dist][3]
 ```
 
 ```code
@@ -759,10 +760,11 @@ Integrate[PDF[dist][x], {x, 6 - 3 2, 6 + 3 2}] // N
 ```
 
 ```code
-dist = NormalDistribution[mu, sigma];
-CDF[dist][mu + 3 sigma] - CDF[dist][mu - 3 sigma] // N (* 方法1 *)
-Probability[mu - 3 sigma <= X <= mu + 3 sigma,
-  Distributed[X, dist]] // N (* 方法2 *)
+Clear[mu, sigma]; dist = NormalDistribution[mu, sigma];
+CDF[dist][mu + 3 sigma] - CDF[dist][mu - 3 sigma] // N        (* 方法1 *)
+Probability[mu - 3 sigma <= X <= mu + 3 sigma,                (* 方法2 *)
+  Distributed[X, dist]] // N
+Integrate[PDF[dist][x], {x, mu - 3 sigma, mu + 3 sigma}] // N (* 方法3 *)
 ```
 
 ```code
@@ -785,7 +787,7 @@ Xs = {0, 100, 1000, 10000}; Ps = {0.9, 0.08, 0.015, 0.005};
 tmp = Piecewise[Thread[{Ps, Thread[x == Xs]}]];
 dist = ProbabilityDistribution[tmp, {x, 0, 10000, 1}]; (* 確率分布の定義 *)
 data = RandomVariate[dist, 1000];
-Counts[data] (* <|0->900,100->77,1000->18,10000->5|> *)
+Counts[data] (* <|0->900, 100->77, 1000->18, 10000->5|> *)
 ```
 
 ```code
@@ -836,8 +838,8 @@ PDF[distY]
 ```
 
 ```code
-dist = NormalDistribution[mu, sigma]; Clear[a, b];
-TransformedDistribution[a X + b, Distributed[X, dist]]
+dist = NormalDistribution[mu, sigma];
+Clear[a, b]; TransformedDistribution[a X + b, Distributed[X, dist]]
 ```
 
 ```code
@@ -924,13 +926,14 @@ Association[Table[
 ```
 
 ```code
-distX = DiscreteUniformDistribution[{1, 6}];
-distY = TransformedDistribution[Mod[X, 4], Distributed[X, distX]];
-distXY = TransformedDistribution[{X, Y},
-   {Distributed[X, distX], Distributed[Y, distY]}];
+distXp = DiscreteUniformDistribution[{1, 6}];
+distYp = TransformedDistribution[Mod[X, 4], Distributed[X, distX]];
+distXYp = TransformedDistribution[{X, Y},
+   {Distributed[X, distXp], Distributed[Y, distYp]}];
 ```
 
 ```code
+Clear[x, y];
 PDF[MarginalDistribution[distXY, 1]][x]
 PDF[MarginalDistribution[distXY, 2]][y]
 ```
@@ -959,10 +962,10 @@ Expectation[{X, Y,           (* 平均 *)
 ```
 
 ```code
-tmp = Distributed[X, distX];
-Sum[x Probability[X == x, tmp], {x, 1, 6}]                   (* Xの平均 *)
-Sum[(x - uX) (y - uY) Probability[And[X == x, Y == y], tmp], (* 共分散 *)
- {x, 1, 6}, {y, 0, 3}]
+tmp = Distributed[{X, Y}, distXY];
+Sum[x Probability[X == x, tmp], {x, 1, 6}]                (* Xの平均 *)
+Sum[(x - uX) (y - uY) Probability[{X, Y} == {x, y}, tmp], (* 共分散 *)
+  {x, 1, 6}, {y, 0, 3}]
 ```
 
 ```code
@@ -975,7 +978,7 @@ Table[Probability[And[X <= x, Y <= y], tmp], {x, 1, 6}, {y, 0, 3}] ==
 ```
 
 ```code
-distU = DiscreteUniformDistribution[{1, 6}];
+distU = DiscreteUniformDistribution[{1, 6}]; Clear[U];
 distXY = TransformedDistribution[{Mod[U, 2], Mod[U, 3]},
    Distributed[U, distU]];
 tmp = Distributed[{X, Y}, distXY];
@@ -1004,6 +1007,7 @@ distXY = TransformedDistribution[{X, Mod[X, 4]}, Distributed[X, distX]];
 distY = MarginalDistribution[distXY, 2];
 distXplusY = TransformedDistribution[X + Y, Distributed[{X, Y}, distXY]];
 {Mean[distXplusY],
+ Mean[distX]+Mean[distY],
  Variance[distXplusY],
  Variance[distX] + Variance[distY] + 2 Covariance[distXY][[1, 2]]}
 ```
