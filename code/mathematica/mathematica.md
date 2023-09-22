@@ -2066,7 +2066,8 @@ NullSpace[Transpose[A]]
 ```
 
 ```code
-Clear[a, b, c, d, f, s, t, u, x, y]; A = {{a, b}, {c, d}};
+Clear[a, b, c, d, f, s, t, u, x, y];
+A = {{a, b}, {c, d}};
 f[x_] := A . x
 R = ParametricRegion[{x, y}, {{x, s, s + u}, {y, t, t + u}}];
 Rp = TransformedRegion[R, f];

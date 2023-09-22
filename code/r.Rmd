@@ -512,7 +512,7 @@ integrate(Vectorize(h), -1, 1)
 # 9 多次元の確率分布
 
 ```{r}
-n <- 20; p <- 3 / 10; mu <- n * p; sigma <- (n * p * (1 - p))**0.5
+n <- 15; p <- 4 / 10; mu <- n * p; sigma <- (n * p * (1 - p))**0.5
 plot(0:n, dbinom(0:n, n, p))
 curve(dnorm(x, mu, sigma), add = TRUE)
 ```
