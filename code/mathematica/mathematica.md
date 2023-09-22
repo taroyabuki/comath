@@ -1018,7 +1018,7 @@ Manipulate[
  mu = Mean[distY]; sigma = StandardDeviation[distY];
  distZ = NormalDistribution[mu, sigma];
  Show[DiscretePlot[PDF[distY][x], {x, 0, n}], Plot[PDF[distZ][x], {x, 0, n}]],
- {{n, 20}, 1, 40, 1}, {{p, 3/10}, 0, 1}]
+ {{n, 15}, 1, 40, 1}, {{p, 4/10}, 0, 1}]
 ```
 
 ```code
@@ -1095,7 +1095,7 @@ GraphicsRow[{Histogram[data1], Histogram[data2]}]
 
 ```code
 n = 4; mu = 5; sigma = 7; dist := NormalDistribution[mu, sigma];
-f[x_] := (n - 1) Variance[x]/sigma^2
+Clear[f]; f[x_] := (n - 1) Variance[x]/sigma^2
 data = Table[f[RandomVariate[dist, n]], 10000];
 Show[Histogram[data, Automatic, "PDF"],
  Plot[PDF[ChiSquareDistribution[n - 1]][x], {x, 0, Max[data]}]]
@@ -1119,13 +1119,14 @@ Show[Histogram[data, Automatic, "PDF"],
 ```
 
 ```code
+Clear[k, T];
 TransformedDistribution[T^2, Distributed[T, StudentTDistribution[k]]]
 ```
 
 ```code
 n = 15; p0 = 4/10; dist = BinomialDistribution[n, p0];
 tmp = Table[PDF[dist][x], {x, 0, n}];
-Total[Select[tmp, Function[x, x <= PDF[dist][2]]]] // N
+Total[Cases[tmp, x_ /; x <= PDF[dist][2]]] // N
 ```
 
 ```code
@@ -1194,12 +1195,12 @@ alpha = 5/100;
 m = Length[x]; n = Length[y]; sx2 = Variance[x]; sy2 = Variance[y];
 s2 = ((m - 1) sx2 + (n - 1) sy2)/(m + n - 2);
 T = (Mean[x] - Mean[y] - d)/Sqrt[s2 (1/m + 1/n)];
-t := T /. d -> 0 (* t値 *)
-df = m + n - 2; (* 自由度 *)
+t := T /. d -> 0                  (* t値 *)
+df = m + n - 2;                   (* 自由度 *)
 dist := StudentTDistribution[df];
-P := 1 - CDF[dist][t]; (* P値 *)
+P := 1 - CDF[dist][t];            (* P値 *)
 a := InverseCDF[dist, 1 - alpha]; (* 採択域の上限 *)
-interval := Reduce[T <= a, d] (* 信頼区間 *)
+interval := Reduce[T <= a, d]     (* 信頼区間 *)
 {t, P, a, interval} // N
 ```
 
@@ -1260,13 +1261,13 @@ Minimize[L, {b0, b1}] (* 解析的な結果 *)
 
 ```code
 L = Total[Abs[e]]; (* 差の絶対値の和 *)
-Minimize[L, {b0, b1}]
+Minimize[L, {b0, b1}] // N
 ```
 
 ```code
 e = x1 - (y - b0)/b1;
 L = e . e;
-Minimize[L, {b0, b1}]
+Minimize[L, {b0, b1}] //N
 ```
 
 ```code
@@ -1435,7 +1436,7 @@ t // N
 
 ```code
 tdist := StudentTDistribution[n - p]
-Table[2 Min[CDF[tdist][v], 1 - CDF[tdist][v]], {v, t}] // N
+Table[With[{c = CDF[tdist][v]}, 2 Min[c, 1 - c]], {v, t}] // N
 ```
 
 ```code
@@ -1457,7 +1458,7 @@ A = Transpose[{{0, 1}}]; u = {beta1}; confint // N (* k = 1 *)
 ```
 
 ```code
-tmp = model["ParameterConfidenceIntervals", level]
+tmp = model["ParameterConfidenceIntervals", level];
 g1 = Graphics[{Gray, Apply[Rectangle, Transpose[tmp]]}];
 g2 = Graphics[model["ParameterConfidenceRegion", level]];
 Show[g1, g2, AspectRatio -> 1, Frame -> True]
@@ -1510,7 +1511,7 @@ Show[g, RegionPlot[Evaluate[cond],
 # 12 関数の極限と連続性
 
 ```code
-Clear[f]; f[x_] := 2 x - 3
+Clear[f, x]; f[x_] := 2 x - 3
 Limit[f[x], x -> 1]
 ```
 
@@ -1680,7 +1681,7 @@ Limit[s, n -> Infinity]
 ```
 
 ```code
-Clear[a, x]; Integrate[-x^2 + 4 x + 1, {x, a, x}]
+Clear[a, t, x]; Integrate[-t^2 + 4 t + 1, {t, a, x}]
 ```
 
 ```code
@@ -1725,7 +1726,7 @@ F1x = Integrate[f[x], x];
 ```
 
 ```code
-F2x = Integrate[f[t], {t, 0, x}, GenerateConditions -> True];
+F2x = Integrate[f[t], {t, 0, x}]; (* ●原稿要修正 *)
 (F2x /. x -> 2 Pi) - (F2x /. x -> 0) (* 正解 *)
 ```
 
@@ -1812,6 +1813,7 @@ f[x_, y_] := 2 - x^2 - y^2
 ```
 
 ```code
+f[x_, y_] := 2 - x^2 - y^2
 {Derivative[1, 0][f], Derivative[0, 1][f]}
 ```
 
