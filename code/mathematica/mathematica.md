@@ -442,7 +442,7 @@ sol = SolveValues[{2 x + 3 y == 8, 5 x - 7 y == -9}, {x, y}]
 ```
 
 ```code
-{{x1, y1}} = sol; x1 + y1
+x + 2 y /. sol[[1]](*●要原稿修正*)
 ```
 
 ```code
