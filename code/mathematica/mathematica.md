@@ -176,11 +176,11 @@ g[x] (* 5 *)
 ```
 
 ```code
-Apply[f, x]
+Apply[f, x] (* 5 *)
 ```
 
 ```code
-g[{2, 3}]
+g[{2, 3}] (* 5 *)
 ```
 
 ```code
@@ -787,7 +787,7 @@ Xs = {0, 100, 1000, 10000}; Ps = {0.9, 0.08, 0.015, 0.005};
 tmp = Piecewise[Thread[{Ps, Thread[x == Xs]}]];
 dist = ProbabilityDistribution[tmp, {x, 0, 10000, 1}]; (* 確率分布の定義 *)
 data = RandomVariate[dist, 1000];
-Counts[data] (* <|0->900, 100->77, 1000->18, 10000->5|> *)
+Counts[data]
 ```
 
 ```code
@@ -1167,7 +1167,7 @@ dist = StudentTDistribution[n - 1]; c = CDF[dist][t];
 ```
 
 ```code
-region = {a, b} = InverseCDF[dist, {alpha/2, 1 - alpha/2}] // N
+{a, b} = InverseCDF[dist, {alpha/2, 1 - alpha/2}] // N
 ```
 
 ```code
@@ -2098,9 +2098,9 @@ S = {{2, 2, -2}, {2, 5, -4}, {-2, -4, 5}};
 
 ```code
 S = {{2, 2, -2}, {2, 5, -4}, {-2, -4, 5}};
-{vals, vecs} = Eigensystem[S];      (* 固有値・固有ベクトル *)
-Q = Transpose[Orthogonalize[vecs]]; (* 正規直交な固有ベクトル *)
-L = DiagonalMatrix[vals];           (* 対角行列 *)
+{vals, vecs} = Eigensystem[S];      (* 1 *)
+Q = Transpose[Orthogonalize[vecs]]; (* 2, 3 *)
+L = DiagonalMatrix[vals];           (* 4 *)
 {MatrixForm[Q], MatrixForm[L], S == Q . L . Transpose[Q]}
 ```
 
@@ -2115,7 +2115,7 @@ AllTrue[Eigenvalues[A], NonNegative]
 
 ```code
 A = {{46, 46}, {46, 86}};
-{v1, v2} = Eigenvectors[N[A]][[1]]
+{v1, v2} = Eigenvectors[N[A], 1][[1]]
 ```
 
 ```code

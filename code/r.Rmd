@@ -99,11 +99,11 @@ x <- c(2, 3); g(x)
 ```
 
 ```{r}
-do.call(f, as.list(x))
+do.call(f, as.list(x)) # 5
 ```
 
 ```{r}
-g(c(2, 3))
+g(c(2, 3)) # 5
 ```
 
 ```{r}
@@ -111,7 +111,7 @@ g(c(2, 3))
 ```
 
 ```{r}
-all.equal(0.1 + 0.1 + 0.1, 0.3) # TRUE
+all.equal(0.1 + 0.1 + 0.1, 0.3)
 ```
 
 ```{r}
@@ -119,8 +119,9 @@ all.equal(1e-7, 0, tolerance = 1e-6) # TRUE
 ```
 
 ```{r}
-options(digits = 22) # 表示桁数の設定（デフォルトは7）
-9007199254740992 + 1 # 9007199254740992
+options(digits = 22) # 表示桁数の設定
+9007199254740992 + 1
+options(digits = 7)  # 表示桁数をデフォルト値に戻す．
 ```
 
 # 3 データ構造
@@ -373,8 +374,7 @@ c(a, b)
 ```{r}
 print(cor(anscombe$x1, anscombe$y1))
 print(model <- lm(y1 ~ x1, anscombe))
-plot(anscombe$x1, anscombe$y1)
-abline(model)
+plot(anscombe$x1, anscombe$y1); abline(model)
 ```
 
 # 8 確率変数と確率分布
@@ -468,9 +468,6 @@ curve(dnorm(x, 0, 2), -6, 6, add = TRUE)
 Xs <- c(0, 100, 1000, 10000); Ps <- c(0.9, 0.08, 0.015, 0.005)
 data <- sample(Xs, 1000, replace = TRUE, prob = Ps)
 table(data)
-# data
-#     0   100  1000 10000
-#   912    70    13     5
 ```
 
 ```{r}
@@ -541,6 +538,7 @@ contour(Y1, Y2, matrix(data$z, nrow = length(Y1)))
 mu <- 2; sigma <- 3;
 data1 <- replicate(10000, mean(rnorm(5, mu, sigma)))
 data2 <- replicate(10000, mean(rnorm(50, mu, sigma)))
+rbind(c(mean(data1), var(data1)), c(mean(data2), var(data2)))
 ```
 
 ```{r}
@@ -550,7 +548,7 @@ par(mfrow = c(1, 2)); hist(data1); hist(data2); par(mfrow = c(1, 1))
 ```{r}
 data1 <- replicate(10000, var(rnorm(5, mu, sigma)))
 data2 <- replicate(10000, var(rnorm(50, mu, sigma)))
-c(mean(data1), var(data1), mean(data2), var(data2))
+rbind(c(mean(data1), var(data1)), c(mean(data2), var(data2)))
 ```
 
 ```{r}
@@ -612,7 +610,7 @@ t <- (m - mu0) / sqrt(s2 / n); c <- pt(t, n - 1)
 ```
 
 ```{r}
-(region <- qt(c(alpha / 2, 1 - alpha / 2), n - 1))
+qt(c(alpha / 2, 1 - alpha / 2), n - 1)
 ```
 
 ```{r}
@@ -643,8 +641,8 @@ c(qf(c(alpha / 2, 1 - alpha / 2), m - 1, n - 1))
 # 11 線形回帰分析
 
 ```{r}
-data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
-                   y = c(3, 6, 3, 6))
+data <- data.frame(
+  x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7), y = c(3, 6, 3, 6))
 model <- lm(y ~ x1 + x2, data)
 summary(model)
 # Call:
@@ -679,9 +677,9 @@ optim(c(0, 0), L)
 ```
 
 ```{r}
-data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
-                   y = c(3, 6, 3, 6))
-X <- model.matrix(y ~ ., data)
+data <- data.frame(
+  x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7), y = c(3, 6, 3, 6))
+X <- model.matrix(y ~ ., data); y <- data$y
 solve(t(X) %*% X) %*% t(X) %*% y
 ```
 
@@ -690,15 +688,15 @@ MASS::ginv(X) %*% y
 ```
 
 ```{r}
-data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
-                   y = c(3, 6, 3, 6))
+data <- data.frame(
+  x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7), y = c(3, 6, 3, 6))
 model <- lm(y ~ x1 + x2, data)
 summary(model)$r.squared
 ```
 
 ```{r}
-x1 <- c(1, 3, 6, 10); y <- c(7, 1, 6, 14); data <- data.frame(x1, y)
-X <- model.matrix(y ~ x1, data)
+data <- data.frame(x1 = c(1, 3, 6, 10), y = c(7, 1, 6, 14))
+X <- model.matrix(y ~ x1, data); y <- data$y
 yh <- X %*% MASS::ginv(X) %*% y
 eh <- y - yh; fh <- yh - mean(y); g <- y - mean(y)
 (R2 <- 1 - sum(eh^2) / sum(g^2))
@@ -715,18 +713,17 @@ c(all.equal(mean(eh), 0),                             # 特徴1
 ```
 
 ```{r}
-data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
-                   y = c(3, 6, 3, 6))
+data <- data.frame(
+  x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7), y = c(3, 6, 3, 6))
 model <- lm(y ~ x1 + x2, data)
 sigma(model)^2
 ```
 
 ```{r}
-data <- data.frame(x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7),
-                   y = c(3, 6, 3, 6))
+data <- data.frame(
+  x1 = c(1, 1, 2, 3), x2 = c(2, 3, 5, 7), y = c(3, 6, 3, 6))
 model <- lm(y ~ ., data)
 summary(model)
-# F-statistic:  0.25 on 2 and 1 DF,  p-value: 0.8165
 ```
 
 ```{r}
@@ -755,8 +752,8 @@ data <- data.frame(x1 = c(35, 45, 55, 65, 75), x2 = c(2, 3, 5, 7, 11),
 model0 <- lm(y ~ x1, data)
 model1 <- lm(y ~ x1 + x2, data)
 s0 <- summary(model0); s1 <- summary(model1)
-matrix(c(s0$r.squared, s1$r.squared,
-         s0$adj.r.squared, s1$adj.r.squared), nrow = 2)
+rbind(c(s0$r.squared, s0$adj.r.squared),
+      c(s1$r.squared, s1$adj.r.squared))
 ```
 
 ```{r}
@@ -920,9 +917,9 @@ c(all.equal(S, Q %*% L %*% t(Q)), all.equal(S, V %*% L %*% t(V)))
 
 ```{r}
 S <- rbind(c(2, 2, -2), c(2, 5, -4), c(-2, -4, 5))
-tmp <- eigen(S)       # 固有値・固有ベクトル
-Q <- tmp$vectors      # 正規直交な固有ベクトル
-L <- diag(tmp$values) # 対角行列
+tmp <- eigen(S)       # 1, 2
+Q <- tmp$vectors      # 3
+L <- diag(tmp$values) # 4
 print(Q); print(L); all.equal(S, Q %*% L %*% t(Q))
 ```
 
@@ -942,7 +939,7 @@ eigen(A)$vectors[, 1]
 
 ```{r}
 x1 <- c(1, 3, 6, 10); y <- c(7, 1, 6, 14)
-X <- t(rbind(x1 - mean(x1), y - mean(y)))
+X <- cbind(x1 - mean(x1), y - mean(y))
 (A <- t(X) %*% X)
 ```
 
