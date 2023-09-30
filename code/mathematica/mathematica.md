@@ -2148,7 +2148,7 @@ G = Transpose[A] . A;                                    (* 1 *)
 s = Sqrt[Select[vals, Positive]]; S = DiagonalMatrix[s]; (* 3 *)
 r = Length[s];                                           (* 4 *)
 Vt = Orthogonalize[Take[vecs, r]]; V = Transpose[Vt];    (* 5 *)
-U = A . V . Inverse[S];                                  (* 6 *)
+U = A . Transpose[Vt/s];                                 (* 6 *)
 {MatrixForm[U], MatrixForm[S], MatrixForm[Vt], A == U . S . Vt}
 ```
 

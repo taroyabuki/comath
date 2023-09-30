@@ -967,9 +967,9 @@ G <- t(A) %*% A                         # 1
 eigs <- eigen(G); vals = eigs$values    # 2
 s <- sqrt(vals[vals > 0]); S <- diag(s) # 3
 r <- length(s)                          # 4
-V <- eigs$vectors[, 1:r]                # 5
-U <- A %*% V %*% solve(S)               # 6
-print(U); print(S); print(t(V)); all.equal(A, U %*% S %*% t(V))
+V <- eigs$vectors[, 1:r]; Vt <- t(V)    # 5
+U <- A %*% t(Vt / s)                    # 6
+print(U); print(S); print(Vt); all.equal(A, U %*% S %*% Vt)
 ```
 
 ```{r}
