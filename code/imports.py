@@ -6,7 +6,6 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 import sympy as sym
 from collections import Counter
-from math import isclose
 from patsy import dmatrices
 from scipy import linalg, stats
 from scipy.integrate import quad
