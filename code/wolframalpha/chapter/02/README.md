@@ -17,5 +17,5 @@
 - [x1 = 2; x2 = 3; x1 \+ x2](https://www.wolframalpha.com/input?i=x1%20%3D%202%3B%20x2%20%3D%203%3B%20x1%20%2B%20x2)<br>![x1 = 2; x2 = 3; x1 \+ x2](images/16.png)
 - [f\(2,3\) where f\(x,y\)=x\+y](https://www.wolframalpha.com/input?i=f%282%2C3%29%20where%20f%28x%2Cy%29%3Dx%2By)<br>![f\(2,3\) where f\(x,y\)=x\+y](images/17.png)
 - [g\(x\) where x=\{2,3\}, g\(x\)=x\[\[1\]\]\+x\[\[2\]\]](https://www.wolframalpha.com/input?i=g%28x%29%20where%20x%3D%7B2%2C3%7D%2C%20g%28x%29%3Dx%5B%5B1%5D%5D%2Bx%5B%5B2%5D%5D)<br>![g\(x\) where x=\{2,3\}, g\(x\)=x\[\[1\]\]\+x\[\[2\]\]](images/18.png)
-- [0\.1 \+ 0\.1 \+ 0\.1 == 0\.3](https://www.wolframalpha.com/input?i=0.1%20%2B%200.1%20%2B%200.1%20%3D%3D%200.3)<br>![0\.1 \+ 0\.1 \+ 0\.1 == 0\.3](images/19.png)
-- [1/10 \+ 1/10 \+ 1/10](https://www.wolframalpha.com/input?i=1%2F10%20%2B%201%2F10%20%2B%201%2F10)<br>![1/10 \+ 1/10 \+ 1/10](images/20.png)
+- [0\.1 \+ 0\.2 == 0\.3](https://www.wolframalpha.com/input?i=0.1%20%2B%200.2%20%3D%3D%200.3)<br>![0\.1 \+ 0\.2 == 0\.3](images/19.png)
+- [1/10 \+ 2/10 == 3/10](https://www.wolframalpha.com/input?i=1%2F10%20%2B%202%2F10%20%3D%3D%203%2F10)<br>![1/10 \+ 2/10 == 3/10](images/20.png)

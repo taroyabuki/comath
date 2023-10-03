@@ -23,8 +23,8 @@
 - [x1 = 2; x2 = 3; x1 \+ x2](https://www.wolframalpha.com/input?i=x1%20%3D%202%3B%20x2%20%3D%203%3B%20x1%20%2B%20x2)
 - [f\(2,3\) where f\(x,y\)=x\+y](https://www.wolframalpha.com/input?i=f%282%2C3%29%20where%20f%28x%2Cy%29%3Dx%2By)
 - [g\(x\) where x=\{2,3\}, g\(x\)=x\[\[1\]\]\+x\[\[2\]\]](https://www.wolframalpha.com/input?i=g%28x%29%20where%20x%3D%7B2%2C3%7D%2C%20g%28x%29%3Dx%5B%5B1%5D%5D%2Bx%5B%5B2%5D%5D)
-- [0\.1 \+ 0\.1 \+ 0\.1 == 0\.3](https://www.wolframalpha.com/input?i=0.1%20%2B%200.1%20%2B%200.1%20%3D%3D%200.3)
-- [1/10 \+ 1/10 \+ 1/10](https://www.wolframalpha.com/input?i=1%2F10%20%2B%201%2F10%20%2B%201%2F10)
+- [0\.1 \+ 0\.2 == 0\.3](https://www.wolframalpha.com/input?i=0.1%20%2B%200.2%20%3D%3D%200.3)
+- [1/10 \+ 2/10 == 3/10](https://www.wolframalpha.com/input?i=1%2F10%20%2B%202%2F10%20%3D%3D%203%2F10)
 
 # [3 データ構造](chapter/03)
 - [10\{2,3\}](https://www.wolframalpha.com/input?i=10%7B2%2C3%7D)
@@ -123,7 +123,7 @@
 
 # [16 ベクトル](chapter/16)
 - [100\{1,2\}\+10\{3,1\}](https://www.wolframalpha.com/input?i=100%7B1%2C2%7D%2B10%7B3%2C1%7D)
-- [a==b where a=\{1/10\+1/10\+1/10,1\}, b=\{3/10,1\}](https://www.wolframalpha.com/input?i=a%3D%3Db%20where%20a%3D%7B1%2F10%2B1%2F10%2B1%2F10%2C1%7D%2C%20b%3D%7B3%2F10%2C1%7D)
+- [a==b where a=\{1/10\+2/10,1\}, b=\{3/10,1\}](https://www.wolframalpha.com/input?i=a%3D%3Db%20where%20a%3D%7B1%2F10%2B2%2F10%2C1%7D%2C%20b%3D%7B3%2F10%2C1%7D)
 - [norm \{3,4\}](https://www.wolframalpha.com/input?i=norm%20%7B3%2C4%7D)
 - [sqrt\(\{x,y\}\.\{x,y\}\)](https://www.wolframalpha.com/input?i=sqrt%28%7Bx%2Cy%7D.%7Bx%2Cy%7D%29)
 - [normalize \{3,4\}](https://www.wolframalpha.com/input?i=normalize%20%7B3%2C4%7D)

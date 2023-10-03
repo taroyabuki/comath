@@ -205,15 +205,15 @@ Abs[Pi - pi2] < Abs[Pi - pi10] (* True *)
 ```
 
 ```code
-0.1 + 0.1 + 0.1 == 0.3
+0.1 + 0.2 == 0.3
 ```
 
 ```code
-1/10 + 1/10 + 1/10
+1/10 + 2/10 == 3/10
 ```
 
 ```code
-Block[{Internal`$EqualTolerance = 0}, 0.1 + 0.1 + 0.1 == 0.3]
+Block[{Internal`$EqualTolerance = 0}, 0.1 + 0.2 == 0.3]
 ```
 
 ```code
@@ -1925,8 +1925,12 @@ rhs = IntegrateChangeVariables[lhs, {r, theta}, "Cartesian" -> "Polar"]
 ```
 
 ```code
-a = {1/10 + 1/10 + 1/10, 1}; b = {3/10, 1};
+a = {1/10 + 2/10, 1}; b = {3/10, 1};
 a == b
+```
+
+```code
+MapThread[Equal, {a, b}]
 ```
 
 ```code
