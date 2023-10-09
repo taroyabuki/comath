@@ -631,8 +631,13 @@ Show[ListPlot[data], Plot[model[x], {x, 35, 75}]]
 ```code
 Clear[a, b, p, q, r, s, t, u];
 L = Total[(y - (a x + b))^2];
-tmp = Reduce[ForAll[{a, b}, L == p (a - q)^2 + r (b - (s a + t))^2 + u]]
-{q, s q + t} /. ToRules[tmp]
+M = p (a - q)^2 + r (b - (s a + t))^2 + u;
+tmp = SolveAlways[L == M, {a, b}][[1]];
+M /. tmp
+```
+
+```code
+{q, s q + t} /. tmp
 ```
 
 ```code
