@@ -1,0 +1,13 @@
+# 14 積分
+- [int\_1^4 \(\-x^2\+4x\+1\)dx](https://www.wolframalpha.com/input?i=int_1%5E4%20%28-x%5E2%2B4x%2B1%29dx)<br>![int\_1^4 \(\-x^2\+4x\+1\)dx](images/01.png)
+- [simplify int\_a^x \(\-t^2\+4t\+1\)dt](https://www.wolframalpha.com/input?i=simplify%20int_a%5Ex%20%28-t%5E2%2B4t%2B1%29dt)<br>![simplify int\_a^x \(\-t^2\+4t\+1\)dt](images/02.png)
+- [int \-x^2\+4x\+1 dx](https://www.wolframalpha.com/input?i=int%20-x%5E2%2B4x%2B1%20dx)<br>![int \-x^2\+4x\+1 dx](images/03.png)
+- [y'\(x\)=\-x^2\+4x\+1](https://www.wolframalpha.com/input?i=y%27%28x%29%3D-x%5E2%2B4x%2B1)<br>![y'\(x\)=\-x^2\+4x\+1](images/04.png)
+- [y'\(x\)=\-x^2\+4x\+1,y\(0\)=1](https://www.wolframalpha.com/input?i=y%27%28x%29%3D-x%5E2%2B4x%2B1%2Cy%280%29%3D1)<br>![y'\(x\)=\-x^2\+4x\+1,y\(0\)=1](images/05.png)
+- [y'\(x\)=\-x y\(x\)](https://www.wolframalpha.com/input?i=y%27%28x%29%3D-x%20y%28x%29)<br>![y'\(x\)=\-x y\(x\)](images/06.png)
+- [d/dx\(int\_a^x f\(t\)dt\)](https://www.wolframalpha.com/input?i=d%2Fdx%28int_a%5Ex%20f%28t%29dt%29)<br>![d/dx\(int\_a^x f\(t\)dt\)](images/07.png)
+- [int\_0^\(pi/2\) log\(sin\(x\)\) dx](https://www.wolframalpha.com/input?i=int_0%5E%28pi%2F2%29%20log%28sin%28x%29%29%20dx)<br>![int\_0^\(pi/2\) log\(sin\(x\)\) dx](images/08.png)
+- [int \(p x\+q\)^100 dx](https://www.wolframalpha.com/input?i=int%20%28p%20x%2Bq%29%5E100%20dx)<br>![int \(p x\+q\)^100 dx](images/09.png)
+- [int 1/x^a x=0\.\.1](https://www.wolframalpha.com/input?i=int%201%2Fx%5Ea%20x%3D0..1)<br>![int 1/x^a x=0\.\.1](images/10.png)
+- [int 1/x^a x=1\.\.infinity](https://www.wolframalpha.com/input?i=int%201%2Fx%5Ea%20x%3D1..infinity)<br>![int 1/x^a x=1\.\.infinity](images/11.png)
+- [int exp\(\-x^2\) x=\-infinity\.\.infinity](https://www.wolframalpha.com/input?i=int%20exp%28-x%5E2%29%20x%3D-infinity..infinity)<br>![int exp\(\-x^2\) x=\-infinity\.\.infinity](images/12.png)

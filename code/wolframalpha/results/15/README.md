@@ -1,0 +1,9 @@
+# 15 多変数関数の微分積分
+- [lim f\(x1,x2\) as \(x1,x2\)\->\(0,0\) where f\(x1,x2\)=x1 x2^2/\(x1^2\+x2^2\)](https://www.wolframalpha.com/input?i=lim%20f%28x1%2Cx2%29%20as%20%28x1%2Cx2%29-%3E%280%2C0%29%20where%20f%28x1%2Cx2%29%3Dx1%20x2%5E2%2F%28x1%5E2%2Bx2%5E2%29)<br>![lim f\(x1,x2\) as \(x1,x2\)\->\(0,0\) where f\(x1,x2\)=x1 x2^2/\(x1^2\+x2^2\)](images/01.png)
+- [lim f\(x,y\) as \(x,y\)\->\(0,0\) where f\(x,y\)=x^2 y/\(x^4\+y^2\)](https://www.wolframalpha.com/input?i=lim%20f%28x%2Cy%29%20as%20%28x%2Cy%29-%3E%280%2C0%29%20where%20f%28x%2Cy%29%3Dx%5E2%20y%2F%28x%5E4%2By%5E2%29)<br>![lim f\(x,y\) as \(x,y\)\->\(0,0\) where f\(x,y\)=x^2 y/\(x^4\+y^2\)](images/02.png)
+- [d/dx 2\-x^2\-y^2,d/dy 2\-x^2\-y^2](https://www.wolframalpha.com/input?i=d%2Fdx%202-x%5E2-y%5E2%2Cd%2Fdy%202-x%5E2-y%5E2)<br>![d/dx 2\-x^2\-y^2,d/dy 2\-x^2\-y^2](images/03.png)
+- [grad\(2\-x^2\-y^2\)](https://www.wolframalpha.com/input?i=grad%282-x%5E2-y%5E2%29)<br>![grad\(2\-x^2\-y^2\)](images/04.png)
+- [hessian matrix of 2x^3\+5xy\+2y^2](https://www.wolframalpha.com/input?i=hessian%20matrix%20of%202x%5E3%2B5xy%2B2y%5E2)<br>![hessian matrix of 2x^3\+5xy\+2y^2](images/05.png)
+- [local extrema of 2x1^3\+x1 x2^2\+5x1^2\+x2^2](https://www.wolframalpha.com/input?i=local%20extrema%20of%202x1%5E3%2Bx1%20x2%5E2%2B5x1%5E2%2Bx2%5E2)<br>![local extrema of 2x1^3\+x1 x2^2\+5x1^2\+x2^2](images/06.png)
+- [int f\(x,y\) dy dx y=0\.\.x,x=0\.\.1 where f\(x,y\)=x^2\+y^2](https://www.wolframalpha.com/input?i=int%20f%28x%2Cy%29%20dy%20dx%20y%3D0..x%2Cx%3D0..1%20where%20f%28x%2Cy%29%3Dx%5E2%2By%5E2)<br>![int f\(x,y\) dy dx y=0\.\.x,x=0\.\.1 where f\(x,y\)=x^2\+y^2](images/07.png)
+- [int f\(x,y\) dx dy x=y\.\.1,y=0\.\.1 where f\(x,y\)=x^2\+y^2](https://www.wolframalpha.com/input?i=int%20f%28x%2Cy%29%20dx%20dy%20x%3Dy..1%2Cy%3D0..1%20where%20f%28x%2Cy%29%3Dx%5E2%2By%5E2)<br>![int f\(x,y\) dx dy x=y\.\.1,y=0\.\.1 where f\(x,y\)=x^2\+y^2](images/08.png)

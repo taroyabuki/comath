@@ -1,0 +1,12 @@
+# 8 確率変数と確率分布
+- [P\(X=2\),discrete uniform distribution min=1,max=6](https://www.wolframalpha.com/input?i=P%28X%3D2%29%2Cdiscrete%20uniform%20distribution%20min%3D1%2Cmax%3D6)<br>![P\(X=2\),discrete uniform distribution min=1,max=6](images/01.png)
+- [P\(X=3\),distributed binomial distribution n=10,p=3/10](https://www.wolframalpha.com/input?i=P%28X%3D3%29%2Cdistributed%20binomial%20distribution%20n%3D10%2Cp%3D3%2F10)<br>![P\(X=3\),distributed binomial distribution n=10,p=3/10](images/02.png)
+- [binomial distribution](https://www.wolframalpha.com/input?i=binomial%20distribution)<br>![binomial distribution](images/03.png)
+- [P\(X<=3\),distributed binomial distribution n=10,p=3/10](https://www.wolframalpha.com/input?i=P%28X%3C%3D3%29%2Cdistributed%20binomial%20distribution%20n%3D10%2Cp%3D3%2F10)<br>![P\(X<=3\),distributed binomial distribution n=10,p=3/10](images/04.png)
+- [P\(150<=X<=200\),uniform distribution min=0,max=360](https://www.wolframalpha.com/input?i=P%28150%3C%3DX%3C%3D200%29%2Cuniform%20distribution%20min%3D0%2Cmax%3D360)<br>![P\(150<=X<=200\),uniform distribution min=0,max=360](images/05.png)
+- [integral 1/360 150 to 200](https://www.wolframalpha.com/input?i=integral%201%2F360%20150%20to%20200)<br>![integral 1/360 150 to 200](images/06.png)
+- [int 1/360 0 to x](https://www.wolframalpha.com/input?i=int%201%2F360%200%20to%20x)<br>![int 1/360 0 to x](images/07.png)
+- [d/dx x/360](https://www.wolframalpha.com/input?i=d%2Fdx%20x%2F360)<br>![d/dx x/360](images/08.png)
+- [P\(6\-3\*2<=X<=6\+3\*2\),normal distribution mu=6,sigma=2](https://www.wolframalpha.com/input?i=P%286-3%2A2%3C%3DX%3C%3D6%2B3%2A2%29%2Cnormal%20distribution%20mu%3D6%2Csigma%3D2)<br>![P\(6\-3\*2<=X<=6\+3\*2\),normal distribution mu=6,sigma=2](images/09.png)
+- [P\(mu\-3sigma<=X<=mu\+3sigma\),normal distribution](https://www.wolframalpha.com/input?i=P%28mu-3sigma%3C%3DX%3C%3Dmu%2B3sigma%29%2Cnormal%20distribution)<br>![P\(mu\-3sigma<=X<=mu\+3sigma\),normal distribution](images/10.png)
+- [normal distribution](https://www.wolframalpha.com/input?i=normal%20distribution)<br>![normal distribution](images/11.png)

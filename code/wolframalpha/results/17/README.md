@@ -1,0 +1,12 @@
+# 17 行列
+- [\{\{1,2,0\},\{0,3,4\}\}](https://www.wolframalpha.com/input?i=%7B%7B1%2C2%2C0%7D%2C%7B0%2C3%2C4%7D%7D)<br>![\{\{1,2,0\},\{0,3,4\}\}](images/01.png)
+- [DiagonalMatrix\[\{5,7\}\]](https://www.wolframalpha.com/input?i=DiagonalMatrix%5B%7B5%2C7%7D%5D)<br>![DiagonalMatrix\[\{5,7\}\]](images/02.png)
+- [symmetric matrix \{\{1,2\},\{2,3\}\}](https://www.wolframalpha.com/input?i=symmetric%20matrix%20%7B%7B1%2C2%7D%2C%7B2%2C3%7D%7D)<br>![symmetric matrix \{\{1,2\},\{2,3\}\}](images/03.png)
+- [10\{\{2,3\},\{5,7\}\}](https://www.wolframalpha.com/input?i=10%7B%7B2%2C3%7D%2C%7B5%2C7%7D%7D)<br>![10\{\{2,3\},\{5,7\}\}](images/04.png)
+- [\{\{10,20\},\{30,40\}\}\+\{\{2,3\},\{4,5\}\}](https://www.wolframalpha.com/input?i=%7B%7B10%2C20%7D%2C%7B30%2C40%7D%7D%2B%7B%7B2%2C3%7D%2C%7B4%2C5%7D%7D)<br>![\{\{10,20\},\{30,40\}\}\+\{\{2,3\},\{4,5\}\}](images/05.png)
+- [\{\{2,3\},\{5,7\}\}\.\{\{1,2\},\{3,4\}\}](https://www.wolframalpha.com/input?i=%7B%7B2%2C3%7D%2C%7B5%2C7%7D%7D.%7B%7B1%2C2%7D%2C%7B3%2C4%7D%7D)<br>![\{\{2,3\},\{5,7\}\}\.\{\{1,2\},\{3,4\}\}](images/06.png)
+- [det \{\{3,2\},\{1,2\}\}](https://www.wolframalpha.com/input?i=det%20%7B%7B3%2C2%7D%2C%7B1%2C2%7D%7D)<br>![det \{\{3,2\},\{1,2\}\}](images/07.png)
+- [inverse \{\{2,3\},\{5,7\}\}](https://www.wolframalpha.com/input?i=inverse%20%7B%7B2%2C3%7D%2C%7B5%2C7%7D%7D)<br>![inverse \{\{2,3\},\{5,7\}\}](images/08.png)
+- [\(inverse \{\{3,2\},\{1,2\}\}\)\.\{8,4\}](https://www.wolframalpha.com/input?i=%28inverse%20%7B%7B3%2C2%7D%2C%7B1%2C2%7D%7D%29.%7B8%2C4%7D)<br>![\(inverse \{\{3,2\},\{1,2\}\}\)\.\{8,4\}](images/09.png)
+- [rref \{\{4,2,8\},\{2,1,4\}\}](https://www.wolframalpha.com/input?i=rref%20%7B%7B4%2C2%2C8%7D%2C%7B2%2C1%2C4%7D%7D)<br>![rref \{\{4,2,8\},\{2,1,4\}\}](images/10.png)
+- [rank \{\{2,0,2\},\{0,2,\-2\},\{2,2,0\}\}](https://www.wolframalpha.com/input?i=rank%20%7B%7B2%2C0%2C2%7D%2C%7B0%2C2%2C-2%7D%2C%7B2%2C2%2C0%7D%7D)<br>![rank \{\{2,0,2\},\{0,2,\-2\},\{2,2,0\}\}](images/11.png)

@@ -1,0 +1,17 @@
+.ipynb_checkpoints
+*.bat
+*.bak
+*.sh
+*.txt
+addbookmark.py
+mathematica.py
+md2nb.*
+md2m.*
+python.md
+python.py
+r.md
+r.py
+split*
+union.*
+wolframalpha.*
+work

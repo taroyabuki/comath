@@ -1,0 +1,11 @@
+# 4 可視化と方程式
+- [plot x^2\+2x\-4,x=\-5\.\.3](https://www.wolframalpha.com/input?i=plot%20x%5E2%2B2x-4%2Cx%3D-5..3)<br>![plot x^2\+2x\-4,x=\-5\.\.3](images/01.png)
+- [plot x^2\+y^2,x=\-1\.\.1,y=\-1\.\.1](https://www.wolframalpha.com/input?i=plot%20x%5E2%2By%5E2%2Cx%3D-1..1%2Cy%3D-1..1)<br>![plot x^2\+y^2,x=\-1\.\.1,y=\-1\.\.1](images/02.png)
+- [x^2\+y^2=1](https://www.wolframalpha.com/input?i=x%5E2%2By%5E2%3D1)<br>![x^2\+y^2=1](images/03.png)
+- [x^2\+y^2<=1](https://www.wolframalpha.com/input?i=x%5E2%2By%5E2%3C%3D1)<br>![x^2\+y^2<=1](images/04.png)
+- [2x\+3y=8,5x\-7y=\-9](https://www.wolframalpha.com/input?i=2x%2B3y%3D8%2C5x-7y%3D-9)<br>![2x\+3y=8,5x\-7y=\-9](images/05.png)
+- [y<=x and y>=x^2](https://www.wolframalpha.com/input?i=y%3C%3Dx%20and%20y%3E%3Dx%5E2)<br>![y<=x and y>=x^2](images/06.png)
+- [x2\+2x\-4=0](https://www.wolframalpha.com/input?i=x2%2B2x-4%3D0)<br>![x2\+2x\-4=0](images/07.png)
+- [2x\+3y=8,5x\-7y=\-9](https://www.wolframalpha.com/input?i=2x%2B3y%3D8%2C5x-7y%3D-9)<br>![2x\+3y=8,5x\-7y=\-9](images/08.png)
+- [2^x\+sin x=0](https://www.wolframalpha.com/input?i=2%5Ex%2Bsin%20x%3D0)<br>![2^x\+sin x=0](images/09.png)
+- [x^2\+2x\-4<0](https://www.wolframalpha.com/input?i=x%5E2%2B2x-4%3C0)<br>![x^2\+2x\-4<0](images/10.png)
