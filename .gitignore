@@ -1,14 +1,15 @@
 .ipynb_checkpoints
 *.bat
 *.bak
+*.memo
 *.sh
-*.txt
 addbookmark.py
 mathematica.py
 md2nb.*
 md2m.*
 python.md
 python.py
+queries.txt
 r.md
 r.py
 split*
