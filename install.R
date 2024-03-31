@@ -1,1 +1,1 @@
-install.packages(c("ggplot2", "magick"))
+install.packages(c("ellipse", "exactci", "ggplot2", "magick", "matrixcalc", "mnormt", "pracma"))
