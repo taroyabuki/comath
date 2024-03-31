@@ -4,5 +4,6 @@ pandas
 scikit-image
 scikit-learn
 seaborn
+see
 statsmodels
 sympy
