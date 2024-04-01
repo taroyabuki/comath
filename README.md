@@ -54,33 +54,36 @@ Wolfram|Alpha，Python，R，Mathematicaをフル活用して，大学教養レ�
 19. 固有値と固有ベクトル
 20. 特異値分解と擬似逆行列
 
-## 実行環境とサンプルコード
+## 実行環境とコード
 
 目次を表示させると見やすくなります[^1]．
 
 ### 推奨環境
 
-システム|サンプルコード|実行結果
+システム|コード|実行結果
 --|--|--
 [Wolfram\|Alpha](https://www.wolframalpha.com/)|[リンク集](code/wolframalpha)|[キャプチャ画像](code/wolframalpha/results/README.md)
-Python notebook|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/taroyabuki/comath/HEAD?labpath=code%2Fpython%2Fpython-binder.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/python/python.ipynb)|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/python/python-results.ipynb)
-R notebook|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/taroyabuki/comath/HEAD?labpath=code%2Fr%2Fr-binder.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/r/r.ipynb)|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/r/r-results.ipynb)
-[Wolfram Cloud](https://www.wolframcloud.com)|動的生成[^2]|
-Mathematica（[Pi版は無料](https://www.wolfram.com/raspberry-pi/)）|[mathematica.nb](code/mathematica/mathematica.nb)[^3]|[PDF](code/mathematica/results/mathematica-results.pdf)
+Python (JupyterLab)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/taroyabuki/comath/HEAD?labpath=code%2Fpython%2Fpython-binder.ipynb)
+R (JupyterLab)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/taroyabuki/comath/HEAD?labpath=code%2Fr%2Fr-binder.ipynb)
+R (RStudio)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/taroyabuki/comath/HEAD?urlpath=rstudio)[^2]|[Knit to HTML](https://taroyabuki.github.io/comath/r.html)
+[Wolfram Cloud](https://www.wolframcloud.com)|動的生成[^3]|
+Mathematica（[Pi版は無料](https://www.wolfram.com/raspberry-pi/)）|[mathematica.nb](code/mathematica/mathematica.nb)[^4]|[PDF](code/mathematica/results/mathematica-results.pdf)
 
 ### そのほかの環境
 
-システム|サンプルコード
---|--
-JupyterLab[^4] (Wolfram言語)|[wolfram.ipynb](code/mathematica/wolfram.ipynb)
-RStudio (R)|[r.Rmd](code/r/r.Rmd)
+システム|コード|実行結果
+--|--|--
+Python (Google Colab)|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/python/python.ipynb)|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/python/python-results.ipynb)
+R (Google Colab)|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/r/r.ipynb)|[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taroyabuki/comath/blob/master/code/r/r-results.ipynb)
+Wolfram言語 (JupyterLab[^5])|[wolfram.ipynb](code/mathematica/wolfram.ipynb)
 
 
 ### そのほかのコード
 
 - [Pythonで使用するモジュールの一括読込（1.2.2項）](code/imports.py)
 
-[^1]: JupyterLabとGoogle Colabでは「&#8801;」のようなアイコンをクリック，RStudioでは「Outline」をクリックします．Wolfram CloudとMathematicaでは，Ctrl-`A`（&#x2318;-`A`）で全選択→View→Close All Subgroupsで全てのセルを閉じます．
-[^2]: 無料アカウントではノートブックをアップロードできないので，新規作成したノートブックで，`Import["https://raw.githubusercontent.com/taroyabuki/comath/main/code/mathematica/createnb.m", "NB"]`を実行し，コードを読み込みます．
-[^3]: ダウンロードボタンをクリックしてダウンロードするか，Mathematicaで新規作成したノートブックで，`NotebookWrite[EvaluationNotebook[], Import["https://raw.githubusercontent.com/taroyabuki/comath/main/code/mathematica/mathematica.nb", "NB"]]`を実行して読み込みます．
-[^4]: Wolfram言語用のJupyterLabは，[Wolfram Engine Community Edition](https://www.wolfram.com/engine/)と[Wolfram Language kernel for Jupyter notebooks](https://github.com/WolframResearch/WolframLanguageForJupyter)を組み合わせて実現します（無料）．
+[^1]: JupyterLabとGoogle Colabでは「&#8801;」のようなアイコン，RStudioでは「Outline」をクリックします．Wolfram CloudとMathematicaでは，Ctrl-`A`（&#x2318;-`A`）で全選択→View→Close All Subgroupsで全てのセルを閉じます．
+[^2]: code/r/r.Rmdを開いてください．
+[^3]: 無料アカウントではノートブックをアップロードできないので，新規作成したノートブックで，`Import["https://raw.githubusercontent.com/taroyabuki/comath/main/code/mathematica/createnb.m", "NB"]`を実行し，コードを読み込みます．
+[^4]: ダウンロードボタンをクリックしてダウンロードするか，Mathematicaで新規作成したノートブックで，`NotebookWrite[EvaluationNotebook[], Import["https://raw.githubusercontent.com/taroyabuki/comath/main/code/mathematica/mathematica.nb", "NB"]]`を実行して読み込みます．
+[^5]: Wolfram言語用のJupyterLabは，[Wolfram Engine Community Edition](https://www.wolfram.com/engine/)と[Wolfram Language kernel for Jupyter notebooks](https://github.com/WolframResearch/WolframLanguageForJupyter)を組み合わせて実現します（無料）．
