@@ -11,10 +11,10 @@ output:
 
 # 1 実行環境
 
-```{r}
-install.packages(c("ellipse", "exactci", "matrixcalc", "mnormt", "pracma"),
-                 repos = "https://cran.rstudio.com/") # reposは必須ではない．
-```
+
+
+
+
 
 ```{r}
 data <- data.frame(x1 = c(1, 3, 6, 10), y = c(7, 1, 6, 14))
@@ -1061,23 +1061,24 @@ r <- length(s); Sr <- diag(s, r) # diag(s)ではない．
 print(Ur); print(Sr); print(tVr); all.equal(A, Ur %*% Sr %*% tVr)
 ```
 
-```{r}
-# Rで必要なパッケージのインストール
-system(paste0(
-  "command -v conda && conda install -c conda-forge imagemagick -y ",
-  "|| (sudo apt-get update && sudo apt-get install -y libmagick++-dev ",
-  "| tail -n 1)"))
-install.packages("magick",
-                 repos = "https://cran.rstudio.com/") # reposは必須ではない．
-```
+
+
+
+
+
+
+
+
+
 
 ```{r}
 library(magick)
-url <- "https://github.com/taroyabuki/comath/raw/main/images/boy.jpg"
+# Binderでは，小さい画像を使う．
+url <- "https://github.com/taroyabuki/comath/raw/main/images/boy-small.jpg"
 image <- image_convert(image_read(url), colorspace = "gray") # 画像の読み込み
 A <- as.integer(image_data(image))[, , 1]; A <- A / max(A)   # 行列への変換
 tmp <- svd(A); U <- tmp$u; s <- tmp$d; V <- tmp$v            # 特異値分解
-k <- 52
+k <- 17 # Binderでは，数値の個数を約20%にする．
 Ak <- U[, 1:k] %*% diag(s[1:k], k) %*% t(V[, 1:k]) # 近似
 B <- (Ak - min(Ak)) / (max(Ak) - min(Ak))          # 数値を0～1にする．
 par(mar = rep(0.5, 4), mfrow = c(1, 2)) # 余白を0.5にして，並べて表示する．
