@@ -8,7 +8,7 @@ Dockerが動作する環境を前提とします．
 
 Python, R, Wolfram言語が使えるJupyter Labを，Dockerコンテナで提供します．
 
-コンテナを構築は次のように構築できるようになります（`pass`はパスワード（変更可）．Ctrl-Cで終了）．
+コンテナを次のように構築できるようになります（`pass`はパスワード（変更可）．Ctrl-Cで終了）．
 
 ```bash
 docker run --rm -it -v $(pwd):/home/wolframengine/work -e PASS=pass -p 8888:8888 comath
