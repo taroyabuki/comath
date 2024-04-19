@@ -4,21 +4,21 @@ Dockerが動作する環境を前提とします．
 
 注意：macOSでも動作を確認していますが，2024年4月の時点で，Dockerイメージwolframresearch/wolframengineのプラットフォームがlinux/amd64だけでなので，性能は悪いかもしれません．
 
-## 目標
+## 目標（使い方）
 
 Python, R, Wolfram言語が使えるJupyter Labを，Dockerコンテナで提供します．
 
-コンテナを次のように構築できるようになります（`pass`はパスワード（変更可）．Ctrl-Cで終了）．
+準備（後述）が終わると，コンテナを次のように構築できます（`pass`はパスワード（変更可）．Ctrl-Cで終了）．
 
 ```bash
 docker run --rm -it -v $(pwd):/home/wolframengine/work -e PASS=pass -p 8888:8888 comath
 ```
 
-ブラウザでhttp://localhost:8888 にアクセスして使えるようになります（計算が途中で止まったようにみえるときは，Kernel→Restart Kernel）．
+ブラウザでhttp://localhost:8888 にアクセスすると，Jupyter Labが使えます（計算が途中で止まったようにみえるときは，Kernel→Restart Kernel）．
 
 ![Jupyter Lab](jupyterlab.png)
 
-/home/wolframengine/work に保存したファイルはホストに保存されるようになります．
+/home/wolframengine/work に保存したファイルはホストに保存されます．
 
 ## 準備
 
@@ -33,7 +33,7 @@ mkdir Licensing
 docker run -it wolframresearch/wolframengine
 ```
 
-Wolfram IDとパスワードを入力すると有効化されます（参考：https://hub.docker.com/r/wolframresearch/wolframengine ）．
+Wolfram IDとパスワードを入力するとWolfram Engineが有効化されます（参考：https://hub.docker.com/r/wolframresearch/wolframengine ）．
 
 ```
 > docker run -it wolframresearch/wolframengine
@@ -73,7 +73,7 @@ Wolfram Engineの動作を確認します（`Quit`で終了）．
 docker run --rm -it -v ./Licensing:/usr/share/WolframEngine/Licensing wolframresearch/wolframengine
 ```
 
-## イメージ構築
+### イメージ構築
 
 Python, R, Wolfram Engineを使えるJupyter LabのDockerイメージを構築します（[Dockerfile](https://raw.githubusercontent.com/taroyabuki/comath/main/docker/Dockerfile)）．
 
