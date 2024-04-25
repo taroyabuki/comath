@@ -75,7 +75,7 @@ docker run --rm -it -v ./Licensing:/usr/share/WolframEngine/Licensing wolframres
 
 ### イメージ構築
 
-Python, R, Wolfram Engineを使えるJupyter LabのDockerイメージを構築します（[Dockerfile](https://raw.githubusercontent.com/taroyabuki/comath/main/docker/Dockerfile)）．
+Python, R, Wolfram Engineを使えるJupyter LabのDockerイメージを構築します（[Dockerfile](Dockerfile)）．
 
 ```bash
 docker run --rm curlimages/curl https://raw.githubusercontent.com/taroyabuki/comath/main/docker/Dockerfile \
