@@ -1,12 +1,32 @@
-Mathematica 14.0.0 Kernel for Microsoft Windows (64-bit)
-Copyright 1988-2023 Wolfram Research, Inc.
+Wolfram 14.1.0 Kernel for Microsoft Windows (64-bit)
+Copyright 1988-2024 Wolfram Research, Inc.
 
 In[1]:= 
 In[2]:= In[2]:= 
 In[3]:= In[3]:= 
 In[4]:= In[4]:= 
 In[5]:= 
-Out[5]= FittedModel[2. + 1. X1]
+Out[5]= FittedModel[<|Type -> Linear, 
+ 
+>     Model -> <|FittedParameters -> {2., 1.}, IndependentVariables -> {X1}, 
+ 
+>       BasisFunctions -> {1, X1}, 
+ 
+>       LinearOffset -> <|Function -> 0, Values -> 0|>|>, 
+ 
+>     Weights -> <|ExampleWeights -> 1.|>, 
+ 
+>     InputData -> {{1, 7}, {3, 1}, {6, 6}, {10, 14}}, 
+ 
+>     UserDefinedDesignMatrixQ -> False, 
+ 
+>     DesignMatrix -> {{1., 1.}, {1., 3.}, {1., 6.}, {1., 10.}}, 
+ 
+>     Localizer -> 
+ 
+>      Function[Null, Internal`LocalizedBlock[{X1}, #1], {HoldAll}], 
+ 
+>     Options -> {}|>]
 
 In[6]:= 
 Out[6]= {2., 1.}
@@ -630,7 +650,29 @@ In[264]:= In[264]:=
 In[265]:= In[265]:= 
 In[266]:= 
 In[267]:= 
-Out[267]= FittedModel[65.1 + 1.38 X]
+Out[267]= FittedModel[<|Type -> Linear, 
+ 
+>     Model -> <|FittedParameters -> {65.1, 1.38}, 
+ 
+>       IndependentVariables -> {X}, BasisFunctions -> {1, X}, 
+ 
+>       LinearOffset -> <|Function -> 0, Values -> 0|>|>, 
+ 
+>     Weights -> <|ExampleWeights -> 1.|>, 
+ 
+>     InputData -> {{35, 114}, {45, 124}, {55, 143}, {65, 158}, {75, 166}}, 
+ 
+>     UserDefinedDesignMatrixQ -> False, 
+ 
+>     DesignMatrix -> 
+ 
+>      {{1., 35.}, {1., 45.}, {1., 55.}, {1., 65.}, {1., 75.}}, 
+ 
+>     Localizer -> 
+ 
+>      Function[Null, Internal`LocalizedBlock[{X}, #1], {HoldAll}], 
+ 
+>     Options -> {}|>]
 
 In[268]:= In[268]:= 
 Out[268]= 120.3
@@ -666,7 +708,35 @@ In[278]:=
 Out[278]= 0.816421
 
 In[279]:= 
-Out[279]= FittedModel[3.00009 + 0.500091 X]
+Out[279]= FittedModel[<|Type -> Linear, 
+ 
+>     Model -> <|FittedParameters -> {3.00009, 0.500091}, 
+ 
+>       IndependentVariables -> {X}, BasisFunctions -> {1, X}, 
+ 
+>       LinearOffset -> <|Function -> 0, Values -> 0|>|>, 
+ 
+>     Weights -> <|ExampleWeights -> 1.|>, 
+ 
+>     InputData -> 
+ 
+>      {{10, 8.04}, {8, 6.95}, {13, 7.58}, {9, 8.81}, {11, 8.33}, {14, 9.96}, 
+ 
+>       {6, 7.24}, {4, 4.26}, {12, 10.84}, {7, 4.82}, {5, 5.68}}, 
+ 
+>     UserDefinedDesignMatrixQ -> False, 
+ 
+>     DesignMatrix -> 
+ 
+>      {{1., 10.}, {1., 8.}, {1., 13.}, {1., 9.}, {1., 11.}, {1., 14.}, 
+ 
+>       {1., 6.}, {1., 4.}, {1., 12.}, {1., 7.}, {1., 5.}}, 
+ 
+>     Localizer -> 
+ 
+>      Function[Null, Internal`LocalizedBlock[{X}, #1], {HoldAll}], 
+ 
+>     Options -> {}|>]
 
 In[280]:= 
 Out[280]= -Graphics-
@@ -694,7 +764,7 @@ Out[288]= -Graphics-
 In[289]:= In[289]:= 
 In[290]:= 
 In[291]:= 
-Out[291]= <|1 -> 287, 0 -> 713|>
+Out[291]= <|0 -> 688, 1 -> 312|>
 
 In[292]:= In[292]:= 
 In[293]:= 
@@ -815,7 +885,7 @@ In[332]:=
 In[333]:= 
 In[334]:= 
 In[335]:= 
-Out[335]= <|0 -> 906, 100 -> 75, 1000 -> 16, 10000 -> 3|>
+Out[335]= <|0 -> 899, 100 -> 75, 1000 -> 21, 10000 -> 5|>
 
 In[336]:= In[336]:= 
 In[337]:= 
@@ -882,7 +952,7 @@ In[369]:= In[369]:=
 Out[369]= 73.
 
 In[370]:= In[370]:= 
-Out[370]= 70.8294
+Out[370]= 72.111
 
 In[371]:= In[371]:= 
 In[372]:= 
@@ -1196,7 +1266,7 @@ In[464]:= In[464]:=
 In[465]:= 
 In[466]:= 
 In[467]:= 
-Out[467]= {{2.00702, 1.80296}, {1.99631, 0.184935}}
+Out[467]= {{1.98747, 1.75879}, {1.99565, 0.179566}}
 
 In[468]:= In[468]:= 
 Out[468]= -Graphics-
@@ -1205,7 +1275,7 @@ In[469]:= In[469]:=
 In[470]:= 
 In[471]:= 
 In[472]:= 
-Out[472]= {{9.0798, 40.5827}, {9.00526, 3.36129}}
+Out[472]= {{8.91384, 41.4762}, {9.02993, 3.29268}}
 
 In[473]:= In[473]:= 
 Out[473]= -Graphics-
@@ -1351,7 +1421,29 @@ In[543]:= In[543]:=
 In[544]:= In[544]:= 
 In[545]:= In[545]:= 
 In[546]:= 
-Out[546]= FittedModel[3. - 4. X1 + 2. X2]
+Out[546]= FittedModel[<|Type -> Linear, 
+ 
+>     Model -> <|FittedParameters -> {3., -4., 2.}, 
+ 
+>       IndependentVariables -> {X1, X2}, BasisFunctions -> {1, X1, X2}, 
+ 
+>       LinearOffset -> <|Function -> 0, Values -> 0|>|>, 
+ 
+>     Weights -> <|ExampleWeights -> 1.|>, 
+ 
+>     InputData -> {{1, 2, 3}, {1, 3, 6}, {2, 5, 3}, {3, 7, 6}}, 
+ 
+>     UserDefinedDesignMatrixQ -> False, 
+ 
+>     DesignMatrix -> 
+ 
+>      {{1., 1., 2.}, {1., 1., 3.}, {1., 2., 5.}, {1., 3., 7.}}, 
+ 
+>     Localizer -> 
+ 
+>      Function[Null, Internal`LocalizedBlock[{X1, X2}, #1], {HoldAll}], 
+ 
+>     Options -> {}|>]
 
 In[547]:= 
 Out[547]= {3., -4., 2.}
