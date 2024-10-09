@@ -754,7 +754,7 @@ c(all.equal(mean(eh), 0),                             # 特徴1
   all.equal(R2, sum(fh * fh) / sum(g * g)),           # 特徴4
   all.equal(R2, cor(y, yh[, 1])^2),                   # 特徴5
   0 <= R2 & R2 <= 1,                                  # 特徴6
-  all.equal(cor(y, yh[, 1]), cor(y, data$x1)))        # 特徴7
+  all.equal(cor(y, yh[, 1])^2, cor(y, data$x1)^2))    # 特徴7
 ```
 
 ```{r}

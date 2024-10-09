@@ -1566,13 +1566,13 @@ R2 = 1 - eh . eh/g . g; N[R2]
 ```
 
 ```code
-{Mean[eh] == 0,                            (* 特徴1 *)
- Mean[yh] == Mean[y],                      (* 特徴2 *)
- g . g == fh . fh + eh . eh,               (* 特徴3 *)
- R2 == fh . fh/g . g,                      (* 特徴4 *)
- R2 == Correlation[y, yh]^2,               (* 特徴5 *)
- 0 <= R2 <= 1,                             (* 特徴6 *)
- Correlation[y, yh] == Correlation[y, x1]} (* 特徴7 *)
+{Mean[eh] == 0,                                (* 特徴1 *)
+ Mean[yh] == Mean[y],                          (* 特徴2 *)
+ g . g == fh . fh + eh . eh,                   (* 特徴3 *)
+ R2 == fh . fh/g . g,                          (* 特徴4 *)
+ R2 == Correlation[y, yh]^2,                   (* 特徴5 *)
+ 0 <= R2 <= 1,                                 (* 特徴6 *)
+ Correlation[y, yh]^2 == Correlation[y, x1]^2} (* 特徴7 *)
 ```
 
 ```code

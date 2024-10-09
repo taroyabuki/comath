@@ -6,7 +6,8 @@
 
 Wolfram|Alpha，Python，R，Mathematicaをフル活用して，大学教養レベルの統計，微分積分，線形代数の全体像を把握する．学び直しにも最適な一冊．
 
-[書店へのリンク集（版元ドットコム）](https://www.hanmoto.com/bd/isbn/9784274231797)
+- [書店へのリンク集（版元ドットコム）](https://www.hanmoto.com/bd/isbn/9784274231797)
+- [国会図書館](https://ndlsearch.ndl.go.jp/books/R100000002-I033398783)
 
 ![書影](https://www.ohmsha.co.jp/Portals/0/book/small/978-4-274-23179-7.jpg)
 
