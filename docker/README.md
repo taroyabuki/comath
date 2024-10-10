@@ -81,10 +81,3 @@ Python, R, Wolfram Engineを使えるJupyter LabのDockerイメージを構築�
 docker run --rm curlimages/curl https://raw.githubusercontent.com/taroyabuki/comath/main/docker/Dockerfile \
 | docker build -t comath -f- .
 ```
-
-補足：aptのプロキシがある環境では，次のようにプロキシを指定します．
-    
-```bash
-docker run --rm curlimages/curl https://raw.githubusercontent.com/taroyabuki/comath/main/docker/Dockerfile \
-| docker build -t comath --build-arg APT_PROXY=http://10.100.192.10:3142 -f- .
-```

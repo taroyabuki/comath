@@ -1,13 +1,10 @@
 FROM wolframresearch/wolframengine
 
-ARG APT_PROXY
-
 ENV DEBIAN_FRONTEND=noninteractive
 
 USER root
 
 RUN apt-get update \
-  && if [ ! -z "$APT_PROXY" ]; then echo "Acquire::http::Proxy \"${APT_PROXY}\";" > /etc/apt/apt.conf.d/02proxy; fi \
   && apt-get install -y --no-install-recommends \
     build-essential \
     gfortran \
