@@ -3,8 +3,10 @@
 *.bak
 *.memo
 *.sh
+!*-knit.sh
 addbookmark.py
 mathematica.py
+mathpass
 md2nb.*
 md2m.*
 python.md

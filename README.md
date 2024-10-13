@@ -67,7 +67,7 @@ Wolfram|Alpha，Python，R，Mathematicaをフル活用して，大学教養レ�
 --|--|--
 [Wolfram\|Alpha](https://www.wolframalpha.com/)|[リンク集](code/wolframalpha)|[キャプチャ画像](code/wolframalpha/results/README.md)
 Python (JupyterLab)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/taroyabuki/comath/HEAD?labpath=code%2Fpython%2Fpython-binder.ipynb)
-R (JupyterLab)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/taroyabuki/comath/HEAD?labpath=code%2Fr%2Fr-binder.ipynb)
+R (JupyterLab)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/taroyabuki/comath/HEAD?labpath=code%2Fr%2Fr-binder.ipynb)|[Knit to HTML](https://taroyabuki.github.io/comath/python.html)
 R (RStudio)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/taroyabuki/comath/HEAD?urlpath=rstudio)[^2]|[Knit to HTML](https://taroyabuki.github.io/comath/r.html)
 [Wolfram Cloud](https://www.wolframcloud.com)|動的生成[^3]|
 Mathematica（[Pi版は無料](https://www.wolfram.com/raspberry-pi/)）|[mathematica.nb](code/mathematica/mathematica.nb)[^4]|[PDF](code/mathematica/results/mathematica-results.pdf)

@@ -1,0 +1,1 @@
+docker run --rm -it -v "$(pwd)":/home/rstudio/work rocker/ml Rscript -e "rmarkdown::render('/home/rstudio/work/python.Rmd', output_format='html_document', output_file='/home/rstudio/work/python.html')"
