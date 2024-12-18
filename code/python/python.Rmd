@@ -2079,7 +2079,7 @@ pca2 = decomposition.PCA()
 P = pca2.fit_transform(X); print(P) # 主成分スコア
 tV = pca2.components_; print(tV.T)  # 主成分
 print(tV[0])                        # 第1主成分（求めるもの）
-s2 = pca2.explained_variance_ratio_ # 特異値の2乗
+s2 = pca2.singular_values_**2       # 特異値の2乗
 print(np.cumsum(s2) / sum(s2))      # 累積寄与率（後述）
 ```
 
