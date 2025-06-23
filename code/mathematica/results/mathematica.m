@@ -1543,7 +1543,7 @@ NullSpace[5 IdentityMatrix[n] - A]
 Clear["Global`*"];
 
 S = {{2, 2, -2}, {2, 5, -4}, {-2, -4, 5}};
-{Q, L, V} = SingularValueDecomposition[S];
+{Q, L, V} = SingularValueDecomposition[S]; L = Simplify[Transpose[Q] . S . Q]; (*L = Simplify[Transpose[V] . S . V];*)
 {MatrixForm[Q], MatrixForm[L],
  S == Q . L . Transpose[Q] == V . L . Transpose[V]}
 

@@ -1001,7 +1001,7 @@ n <- length(vals); all.equal(A %*% vecs, vecs %*% diag(vals, n))
 
 ```{r}
 S <- rbind(c(2, 2, -2), c(2, 5, -4), c(-2, -4, 5))
-tmp <- svd(S); Q <- tmp$u; d <- tmp$d; L <- diag(d, length(d)); V <- tmp$v
+tmp <- svd(S); Q <- tmp$u; V <- tmp$v; L <- t(Q) %*% S %*% Q; #L <- t(V) %*% S %*% V
 print(Q); print(L);
 c(all.equal(S, Q %*% L %*% t(Q)), all.equal(S, V %*% L %*% t(V)))
 ```

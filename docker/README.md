@@ -30,6 +30,7 @@ Wolfram Engineを有効化して，Licensing/mathpassを作ります．そのた
 
 ```bash
 mkdir Licensing
+docker pull wolframresearch/wolframengine
 docker run -it wolframresearch/wolframengine
 ```
 
@@ -78,6 +79,7 @@ docker run --rm -it -v ./Licensing:/usr/share/WolframEngine/Licensing wolframres
 Python, R, Wolfram Engineを使えるJupyter LabのDockerイメージを構築します（[Dockerfile](Dockerfile)）．
 
 ```bash
+docker pull curlimages/curl
 docker run --rm curlimages/curl https://raw.githubusercontent.com/taroyabuki/comath/main/docker/Dockerfile \
 | docker build -t comath -f- .
 ```

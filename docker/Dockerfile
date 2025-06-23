@@ -16,7 +16,7 @@ RUN apt-get update \
     r-base \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
-  && python3 -m pip install jupyterlab matplotlib numpy pandas scikit-image scikit-learn seaborn see statsmodels sympy \
+  && python3 -m pip install japanize_matplotlib jupyterlab matplotlib numpy pandas scikit-image scikit-learn seaborn see statsmodels sympy \
   && Rscript -e 'options(Ncpus = 8); install.packages(c("ellipse", "exactci", "ggplot2", "IRkernel", "magick", "matrixcalc", "mnormt", "pracma")); IRkernel::installspec(user = FALSE)'
 
 WORKDIR /home/wolframengine
